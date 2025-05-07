@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editor de Archivos CSV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='csv_editor.css') }}">
+</head>
+<body>
+    <h1>Editor de Archivos CSV</h1>
+    <input type="file" id="archivoInput" accept=".csv">
+    <div id="editorCSV">
+        <table id="tablaDatos">
+            <thead><tr></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="button-group">
+        <button id="agregarColumna">Agregar Columna</button>
+        <button id="guardarBoton">Guardar Cambios</button>
+        <button type="button" id="indexCSV">Volver</button>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='csv_editor.js') }}"></script>
+</body>
+</html>

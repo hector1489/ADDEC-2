@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interfaz Civil 3D</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>ADDEC 3D - Interfaz Civil 3D</h1>
+
+    <p>Bienvenido a la interfaz para cargar datos y ejecutar scripts relacionados con AutoCAD y Civil 3D. A continuación podrás cargar archivos CSV, seleccionar scripts a ejecutar, y realizar varias tareas de etiquetado y manipulación de perfiles.</p>
+
+    <form id="formularioDatos">
+      <h3>Cargar Datos</h3>
+      <p>Por favor, selecciona los archivos correspondientes de coordenadas y tuberías en formato CSV.</p>
+      
+      <div class="form-group">
+        <label for="coordenadas">Archivo de coordenadas (CSV):</label>
+        <input type="file" id="coordenadas" name="coordenadas" accept=".csv">
+        <small>Formato esperado: CSV con columnas X, Y, Z, ID, y Etiqueta (opcional).</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="tuberias">Archivo de tuberías (CSV):</label>
+        <input type="file" id="tuberias" name="tuberias" accept=".csv">
+        <small>Formato esperado: CSV con columnas PK_INICIO, PK_FIN, ID_TUBERIA.</small>
+      </div>
+    
+      <h3>Ejecutar Scripts</h3>
+      <p>Selecciona un script para ejecutarlo en AutoCAD o Civil 3D.</p>
+      
+      <div class="form-group">
+        <label for="scriptSelector">Seleccionar Script:</label>
+        <select id="scriptSelector">
+          <option value="" disabled selected>-- Seleccionar Script --</option>
+        </select>
+      </div>
+    
+      <div class="button-group">
+        <button type="button" id="cargarDatos">Cargar datos</button>
+        <button type="button" id="ejecutarScript">Ejecutar script</button>
+        <button type="button" id="editarCSV">Editar CSV</button>
+        <button type="button" id="seleccionarObjetos">Seleccionar Objetos</button>
+      </div>
+    
+      <!-- Más botones -->
+      <div class="button-group">
+        <button type="button" id="verObjetos">Ver Objetos de AutoCAD</button>
+        <button id="verPerfiles">Ver Perfiles</button>
+        <button id="abrirDWGBtn">Abrir DWG</button>
+        <input type="file" id="archivoDWG" accept=".dwg" />
+
+      </div>
+    
+      <h3>Cargar Perfiles Ids</h3>
+      <p>Genera y manipula perfiles en Civil 3D. Introduce los IDs correspondientes para cada tarea.</p>
+      
+      <div class="button-group">
+        <button type="button" id="generarPerfilTerreno">Generar Perfil Terreno</button>
+        <button type="button" id="copiarPerfilTapado">Copiar Perfil Tapado</button>
+        <button type="button" id="copiarRasante">Copiar Rasante</button>
+        <button type="button" id="minimizarVerticesRasante">Minimizar Vértices Rasante</button>
+      </div>
+    
+      <h3>Etiquetado</h3>
+      <p>Utiliza estas opciones para etiquetar vértices y distancias en el perfil o alineamiento.</p>
+      
+      <div class="button-group">
+        <button type="button" id="etiquetarVerticesVerticales">Etiquetar Vértices Verticales</button>
+        <button type="button" id="etiquetarVerticesHorizontales">Etiquetar Vértices Horizontales</button>
+        <button type="button" id="etiquetarDistancias">Etiquetar Distancias</button>
+      </div>
+    </form>
+    
+    
+
+    <!-- Sección de mensajes de estado -->
+    <div id="mensajes"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>

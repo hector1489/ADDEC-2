@@ -1,0 +1,100 @@
+:root {
+  --color-primario: #007BFF;
+  --color-secundario: #28a745;
+  --color-fondo: #f4f4f9;
+  --color-texto: #333;
+  --border-color: #ddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: var(--color-fondo);
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-texto);
+}
+
+#archivoInput {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#editorCSV {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+th {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+td input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+td input:focus {
+  border-color: var(--color-primario);
+  outline: none;
+}
+
+#guardarBoton,
+#agregarColumna {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#guardarBoton {
+  background-color: var(--color-secundario);
+  margin-top: 30px;
+}
+
+#guardarBoton:hover {
+  background-color: darken(var(--color-secundario), 10%);
+}
+
+#agregarColumna {
+  background-color: var(--color-primario);
+}
+
+#agregarColumna:hover {
+  background-color: darken(var(--color-primario), 10%);
+}

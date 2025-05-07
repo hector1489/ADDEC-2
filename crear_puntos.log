@@ -1,0 +1,1300 @@
+2025-04-05 19:57:03,770 - INFO - Registrando los blueprints...
+2025-04-05 19:57:03,799 - INFO - Blueprints registrados correctamente.
+2025-04-05 19:57:03,821 - INFO - Iniciando la aplicación Flask...
+2025-04-05 19:57:03,910 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 19:57:03,929 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-05 19:57:12,425 - INFO - Cerrando procesos...
+2025-04-05 19:57:12,440 - INFO - Proceso de Civil 3D terminado.
+2025-04-05 19:57:12,441 - INFO - Finalización del proceso de Civil 3D.
+2025-04-05 19:57:12,442 - DEBUG - Calling CoUninitialize()
+2025-04-05 19:57:12,442 - DEBUG - CoUninitialize() done.
+2025-04-05 19:57:12,641 - DEBUG - Calling CoUninitialize()
+2025-04-05 19:57:12,642 - DEBUG - CoUninitialize() done.
+2025-04-05 19:57:12,762 - INFO - 127.0.0.1 - - [05/Apr/2025 19:57:12] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 19:57:13,321 - INFO - Cerrando procesos...
+2025-04-05 19:57:13,323 - INFO - 127.0.0.1 - - [05/Apr/2025 19:57:13] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-05 19:57:13,739 - INFO - Cerrando procesos...
+2025-04-05 19:57:13,741 - INFO - 127.0.0.1 - - [05/Apr/2025 19:57:13] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-05 19:57:14,082 - INFO - Listando los scripts en el directorio...
+2025-04-05 19:57:14,085 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-05 19:57:14,087 - INFO - Cerrando procesos...
+2025-04-05 19:57:14,089 - INFO - 127.0.0.1 - - [05/Apr/2025 19:57:14] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-05 19:57:14,187 - INFO - Cerrando procesos...
+2025-04-05 19:57:14,188 - INFO - 127.0.0.1 - - [05/Apr/2025 19:57:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 19:59:04,584 - INFO - Cerrando procesos...
+2025-04-05 19:59:04,633 - INFO - 127.0.0.1 - - [05/Apr/2025 19:59:04] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-05 20:04:27,917 - INFO - Inicio de la ruta /cargar_datos
+2025-04-05 20:04:33,779 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-05 20:04:33,781 - INFO - Cerrando procesos...
+2025-04-05 20:04:33,785 - INFO - 127.0.0.1 - - [05/Apr/2025 20:04:33] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-05 20:10:44,710 - DEBUG - Comando enviado a la cola: {'action': 'seleccionar_objetos'}
+2025-04-05 20:10:45,201 - INFO - Obteniendo objetos de AutoCAD...
+2025-04-05 20:10:45,207 - INFO - Conexión con AutoCAD establecida.
+2025-04-05 20:10:45,209 - INFO - No hay objetos en el espacio modelo.
+2025-04-05 20:10:45,210 - WARNING - No se encontraron objetos en AutoCAD.
+2025-04-05 20:10:45,212 - INFO - Recursos COM liberados.
+2025-04-05 20:10:45,213 - INFO - Cerrando procesos...
+2025-04-05 20:10:45,216 - INFO - 127.0.0.1 - - [05/Apr/2025 20:10:45] "GET /obtener_objetos HTTP/1.1" 200 -
+2025-04-05 20:10:47,070 - INFO - Obteniendo perfiles de AutoCAD...
+2025-04-05 20:10:47,237 - INFO - Conexión con AutoCAD establecida.
+2025-04-05 20:10:47,360 - WARNING - No hay objetos en el espacio modelo.
+2025-04-05 20:10:47,395 - INFO - Recursos COM liberados.
+2025-04-05 20:10:47,415 - INFO - Cerrando procesos...
+2025-04-05 20:10:47,533 - INFO - 127.0.0.1 - - [05/Apr/2025 20:10:47] "GET /obtener_perfiles HTTP/1.1" 200 -
+2025-04-05 20:11:14,873 - ERROR - Timeout al esperar el resultado de la cola.
+2025-04-05 20:11:14,874 - INFO - Reintentando obtener el resultado en 5 segundos...
+2025-04-05 20:11:50,046 - ERROR - Timeout al esperar el resultado de la cola.
+2025-04-05 20:11:50,309 - INFO - Reintentando obtener el resultado en 5 segundos...
+2025-04-05 20:12:25,732 - ERROR - Timeout al esperar el resultado de la cola.
+2025-04-05 20:12:25,744 - ERROR - No se pudo obtener el resultado después de 3 intentos.
+2025-04-05 20:12:25,754 - INFO - Cerrando procesos...
+2025-04-05 20:12:25,756 - INFO - 127.0.0.1 - - [05/Apr/2025 20:12:25] "[35m[1mPOST /seleccionar_objetos HTTP/1.1[0m" 500 -
+2025-04-05 20:46:26,177 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-05 20:46:36,333 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-05 20:47:15,340 - INFO - Cerrando procesos...
+2025-04-05 20:47:28,643 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-05 20:49:44,101 - INFO - Cerrando procesos...
+2025-04-05 20:49:46,762 - INFO - Cerrando procesos...
+2025-04-05 20:51:25,064 - INFO - Cerrando procesos...
+2025-04-05 20:51:30,458 - INFO - Recursos COM liberados.
+2025-04-05 20:51:30,532 - INFO - Recursos COM liberados.
+2025-04-05 20:51:30,622 - INFO - Recursos COM liberados.
+2025-04-05 20:51:30,637 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:30] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 20:51:30,638 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:30] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 20:51:30,695 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:30] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 20:51:30,751 - INFO - Cerrando procesos...
+2025-04-05 20:51:30,768 - INFO - Cerrando procesos...
+2025-04-05 20:51:30,811 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:30] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 20:51:30,827 - INFO - Cerrando procesos...
+2025-04-05 20:51:30,886 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:30] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-05 20:51:30,917 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:30] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-05 20:51:31,050 - INFO - 127.0.0.1 - - [05/Apr/2025 20:51:31] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-05 20:51:31,094 - DEBUG - Calling CoUninitialize()
+2025-04-05 20:51:31,139 - DEBUG - CoUninitialize() done.
+2025-04-05 20:51:46,651 - INFO - Registrando los blueprints...
+2025-04-05 20:51:46,664 - INFO - Blueprints registrados correctamente.
+2025-04-05 20:51:46,685 - INFO - Iniciando la aplicación Flask...
+2025-04-05 20:51:46,947 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-05 20:51:46,948 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-05 20:52:49,263 - INFO - Cerrando procesos...
+2025-04-05 20:52:49,265 - INFO - Proceso de Civil 3D terminado.
+2025-04-05 20:52:49,266 - INFO - Finalización del proceso de Civil 3D.
+2025-04-05 20:52:49,266 - DEBUG - Calling CoUninitialize()
+2025-04-05 20:52:49,267 - DEBUG - CoUninitialize() done.
+2025-04-05 20:52:49,396 - DEBUG - Calling CoUninitialize()
+2025-04-05 20:52:49,396 - DEBUG - CoUninitialize() done.
+2025-04-05 20:52:49,512 - INFO - 127.0.0.1 - - [05/Apr/2025 20:52:49] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 20:52:50,077 - INFO - Cerrando procesos...
+2025-04-05 20:52:50,092 - INFO - 127.0.0.1 - - [05/Apr/2025 20:52:50] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-05 20:52:50,469 - INFO - Cerrando procesos...
+2025-04-05 20:52:50,470 - INFO - 127.0.0.1 - - [05/Apr/2025 20:52:50] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-05 20:52:50,874 - INFO - Cerrando procesos...
+2025-04-05 20:52:50,881 - INFO - 127.0.0.1 - - [05/Apr/2025 20:52:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-05 20:52:50,883 - INFO - Listando los scripts en el directorio...
+2025-04-05 20:52:50,889 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-05 20:52:50,891 - INFO - Cerrando procesos...
+2025-04-05 20:52:50,897 - INFO - 127.0.0.1 - - [05/Apr/2025 20:52:50] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-05 20:55:11,057 - INFO - Inicio de la ruta /cargar_datos
+2025-04-05 20:55:13,391 - INFO - Inicio de la ruta /cargar_datos
+2025-04-05 20:55:17,407 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-05 20:55:17,409 - INFO - Cerrando procesos...
+2025-04-05 20:55:17,410 - INFO - 127.0.0.1 - - [05/Apr/2025 20:55:17] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-05 20:55:18,421 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-05 20:55:18,422 - INFO - Cerrando procesos...
+2025-04-05 20:55:18,424 - INFO - 127.0.0.1 - - [05/Apr/2025 20:55:18] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-05 21:21:49,506 - INFO - Cerrando procesos...
+2025-04-05 21:21:55,840 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-05 21:23:46,760 - INFO - Cerrando procesos...
+2025-04-05 21:59:28,402 - INFO - Recursos COM liberados.
+2025-04-05 21:59:28,412 - INFO - 127.0.0.1 - - [05/Apr/2025 21:59:28] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-05 21:59:28,413 - INFO - 127.0.0.1 - - [05/Apr/2025 21:59:28] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-05 21:59:28,433 - INFO - Cerrando procesos...
+2025-04-05 21:59:28,485 - INFO - 127.0.0.1 - - [05/Apr/2025 21:59:28] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-05 21:59:28,883 - DEBUG - Calling CoUninitialize()
+2025-04-05 21:59:28,889 - DEBUG - CoUninitialize() done.
+2025-04-06 21:09:28,257 - INFO - Registrando los blueprints...
+2025-04-06 21:09:28,270 - INFO - Blueprints registrados correctamente.
+2025-04-06 21:09:28,277 - INFO - Iniciando la aplicación Flask...
+2025-04-06 21:09:28,461 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 21:09:28,465 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:10:32,656 - INFO - Cerrando procesos...
+2025-04-06 21:10:32,660 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 21:10:32,661 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 21:10:32,661 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:10:32,661 - DEBUG - CoUninitialize() done.
+2025-04-06 21:10:33,033 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:10:33,034 - DEBUG - CoUninitialize() done.
+2025-04-06 21:10:33,387 - INFO - 127.0.0.1 - - [06/Apr/2025 21:10:33] "GET / HTTP/1.1" 200 -
+2025-04-06 21:10:33,737 - INFO - Cerrando procesos...
+2025-04-06 21:10:33,739 - INFO - 127.0.0.1 - - [06/Apr/2025 21:10:33] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-06 21:10:34,066 - INFO - Cerrando procesos...
+2025-04-06 21:10:34,068 - INFO - 127.0.0.1 - - [06/Apr/2025 21:10:34] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-06 21:10:34,392 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:10:34,393 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:10:34,395 - INFO - Cerrando procesos...
+2025-04-06 21:10:34,396 - INFO - 127.0.0.1 - - [06/Apr/2025 21:10:34] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:10:34,414 - INFO - Cerrando procesos...
+2025-04-06 21:10:34,415 - INFO - 127.0.0.1 - - [06/Apr/2025 21:10:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-06 21:10:39,359 - INFO - Cerrando procesos...
+2025-04-06 21:10:39,360 - INFO - 127.0.0.1 - - [06/Apr/2025 21:10:39] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:11:17,726 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-06 21:11:17,730 - INFO - Recursos COM liberados.
+2025-04-06 21:11:17,732 - INFO - Cerrando procesos...
+2025-04-06 21:11:17,756 - INFO - 127.0.0.1 - - [06/Apr/2025 21:11:17] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-06 21:15:00,837 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:15:00,863 - DEBUG - CoUninitialize() done.
+2025-04-06 21:15:06,911 - INFO - Registrando los blueprints...
+2025-04-06 21:15:06,933 - INFO - Blueprints registrados correctamente.
+2025-04-06 21:15:06,962 - INFO - Iniciando la aplicación Flask...
+2025-04-06 21:15:07,126 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 21:15:07,136 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:15:57,030 - INFO - Cerrando procesos...
+2025-04-06 21:15:57,041 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 21:15:57,043 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 21:15:57,047 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:15:57,058 - DEBUG - CoUninitialize() done.
+2025-04-06 21:15:58,435 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:15:58,439 - DEBUG - CoUninitialize() done.
+2025-04-06 21:15:59,229 - INFO - 127.0.0.1 - - [06/Apr/2025 21:15:59] "GET / HTTP/1.1" 200 -
+2025-04-06 21:16:00,795 - INFO - Cerrando procesos...
+2025-04-06 21:16:00,798 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:00] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:16:00,813 - INFO - Cerrando procesos...
+2025-04-06 21:16:00,815 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:00] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:16:01,019 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:16:01,022 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:16:01,030 - INFO - Cerrando procesos...
+2025-04-06 21:16:01,031 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:01] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:16:25,422 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:16:37,841 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 21:16:37,848 - INFO - Cerrando procesos...
+2025-04-06 21:16:37,852 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:37] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 21:16:51,427 - INFO - Cerrando procesos...
+2025-04-06 21:16:51,434 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:51] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:16:51,473 - INFO - Cerrando procesos...
+2025-04-06 21:16:51,608 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:51] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-06 21:16:51,795 - INFO - Cerrando procesos...
+2025-04-06 21:16:51,797 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:51] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:16:52,287 - INFO - Cerrando procesos...
+2025-04-06 21:16:52,292 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:52] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:16:52,626 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:16:52,627 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:16:52,630 - INFO - Cerrando procesos...
+2025-04-06 21:16:52,630 - INFO - 127.0.0.1 - - [06/Apr/2025 21:16:52] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:17:31,309 - INFO - Cerrando procesos...
+2025-04-06 21:17:31,311 - INFO - 127.0.0.1 - - [06/Apr/2025 21:17:31] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-06 21:17:31,570 - INFO - Cerrando procesos...
+2025-04-06 21:17:31,575 - INFO - 127.0.0.1 - - [06/Apr/2025 21:17:31] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:17:31,878 - INFO - Cerrando procesos...
+2025-04-06 21:17:31,886 - INFO - 127.0.0.1 - - [06/Apr/2025 21:17:31] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:17:31,984 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:17:31,986 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:17:31,988 - INFO - Cerrando procesos...
+2025-04-06 21:17:31,989 - INFO - 127.0.0.1 - - [06/Apr/2025 21:17:31] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:18:12,675 - INFO - Cerrando procesos...
+2025-04-06 21:18:12,675 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:12] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-06 21:18:12,889 - INFO - Cerrando procesos...
+2025-04-06 21:18:12,963 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:12] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:18:13,105 - INFO - Cerrando procesos...
+2025-04-06 21:18:13,106 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:18:13,176 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:18:13,190 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:18:13,197 - INFO - Cerrando procesos...
+2025-04-06 21:18:13,198 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:13] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:18:43,613 - INFO - Cerrando procesos...
+2025-04-06 21:18:43,622 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:43] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:18:43,813 - INFO - Cerrando procesos...
+2025-04-06 21:18:43,902 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:43] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-06 21:18:44,024 - INFO - Cerrando procesos...
+2025-04-06 21:18:44,028 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:44] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:18:44,326 - INFO - Cerrando procesos...
+2025-04-06 21:18:44,328 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:18:44,715 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:18:44,717 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:18:44,718 - INFO - Cerrando procesos...
+2025-04-06 21:18:44,719 - INFO - 127.0.0.1 - - [06/Apr/2025 21:18:44] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:21:45,226 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:22:05,326 - INFO - Cerrando procesos...
+2025-04-06 21:22:12,406 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-06 21:34:58,381 - INFO - Obteniendo perfiles de AutoCAD...
+2025-04-06 21:34:58,405 - INFO - Cerrando procesos...
+2025-04-06 21:35:56,128 - INFO - Obteniendo objetos de AutoCAD...
+2025-04-06 21:40:21,224 - INFO - Cerrando procesos...
+2025-04-06 21:40:32,654 - INFO - Cerrando procesos...
+2025-04-06 21:41:13,036 - INFO - Cerrando procesos...
+2025-04-06 21:41:25,764 - INFO - Cerrando procesos...
+2025-04-06 21:41:30,682 - INFO - Recursos COM liberados.
+2025-04-06 21:41:30,689 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:41:30,731 - INFO - Conexión con AutoCAD establecida.
+2025-04-06 21:41:30,732 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:41:30,766 - INFO - Conexión con AutoCAD establecida.
+2025-04-06 21:41:30,767 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:41:30,768 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET / HTTP/1.1" 200 -
+2025-04-06 21:41:30,769 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET / HTTP/1.1" 200 -
+2025-04-06 21:41:30,774 - INFO - Cerrando procesos...
+2025-04-06 21:41:30,780 - WARNING - No hay objetos en el espacio modelo.
+2025-04-06 21:41:30,785 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:41:30,793 - INFO - No hay objetos en el espacio modelo.
+2025-04-06 21:41:30,830 - INFO - Recursos COM liberados.
+2025-04-06 21:41:30,962 - WARNING - No se encontraron objetos en AutoCAD.
+2025-04-06 21:41:30,973 - INFO - Recursos COM liberados.
+2025-04-06 21:41:30,975 - INFO - Cerrando procesos...
+2025-04-06 21:41:30,992 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:30] "GET /obtener_perfiles HTTP/1.1" 200 -
+2025-04-06 21:41:31,009 - INFO - Cerrando procesos...
+2025-04-06 21:41:31,019 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:31] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-06 21:41:31,034 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:31] "GET /obtener_objetos HTTP/1.1" 200 -
+2025-04-06 21:41:31,237 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:41:31,253 - DEBUG - CoUninitialize() done.
+2025-04-06 21:41:39,562 - INFO - Registrando los blueprints...
+2025-04-06 21:41:39,575 - INFO - Blueprints registrados correctamente.
+2025-04-06 21:41:39,617 - INFO - Iniciando la aplicación Flask...
+2025-04-06 21:41:39,848 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 21:41:39,851 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:41:44,632 - INFO - Cerrando procesos...
+2025-04-06 21:41:44,638 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 21:41:44,639 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 21:41:44,640 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:41:44,641 - DEBUG - CoUninitialize() done.
+2025-04-06 21:41:45,076 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:41:45,077 - DEBUG - CoUninitialize() done.
+2025-04-06 21:41:45,404 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:45] "GET / HTTP/1.1" 200 -
+2025-04-06 21:41:46,015 - INFO - Cerrando procesos...
+2025-04-06 21:41:46,032 - INFO - Cerrando procesos...
+2025-04-06 21:41:46,032 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:46] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-06 21:41:46,036 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:46] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-06 21:41:46,233 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:41:46,258 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:41:46,267 - INFO - Cerrando procesos...
+2025-04-06 21:41:46,269 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:46] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:41:46,554 - INFO - Cerrando procesos...
+2025-04-06 21:41:46,559 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-06 21:41:52,415 - INFO - Cerrando procesos...
+2025-04-06 21:41:52,421 - INFO - 127.0.0.1 - - [06/Apr/2025 21:41:52] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:42:23,765 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:42:27,067 - INFO - Cerrando procesos...
+2025-04-06 21:42:27,071 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:27] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:42:27,126 - INFO - Cerrando procesos...
+2025-04-06 21:42:27,216 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:27] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-06 21:42:27,713 - INFO - Cerrando procesos...
+2025-04-06 21:42:27,730 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:27] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:42:27,744 - INFO - Cerrando procesos...
+2025-04-06 21:42:27,904 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:27] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:42:27,998 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:42:28,097 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:42:28,102 - INFO - Cerrando procesos...
+2025-04-06 21:42:28,111 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:28] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:42:29,932 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 21:42:29,933 - INFO - Cerrando procesos...
+2025-04-06 21:42:29,935 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:29] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 21:42:45,860 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:42:47,738 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 21:42:47,739 - INFO - Cerrando procesos...
+2025-04-06 21:42:47,743 - INFO - 127.0.0.1 - - [06/Apr/2025 21:42:47] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 21:48:52,869 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:48:52,871 - DEBUG - CoUninitialize() done.
+2025-04-06 21:48:59,923 - INFO - Registrando los blueprints...
+2025-04-06 21:48:59,943 - INFO - Blueprints registrados correctamente.
+2025-04-06 21:49:00,094 - INFO - Iniciando la aplicación Flask...
+2025-04-06 21:49:00,302 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 21:49:00,303 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:49:08,424 - INFO - Cerrando procesos...
+2025-04-06 21:49:08,428 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 21:49:08,435 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 21:49:08,436 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:49:08,437 - DEBUG - CoUninitialize() done.
+2025-04-06 21:49:08,833 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:49:08,836 - DEBUG - CoUninitialize() done.
+2025-04-06 21:49:09,169 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:09] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:49:09,676 - INFO - Cerrando procesos...
+2025-04-06 21:49:09,678 - INFO - Cerrando procesos...
+2025-04-06 21:49:09,716 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:09] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:49:09,718 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:49:10,210 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:49:10,217 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:49:10,223 - INFO - Cerrando procesos...
+2025-04-06 21:49:10,224 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:10] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:49:27,890 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:49:29,543 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 21:49:29,545 - INFO - Cerrando procesos...
+2025-04-06 21:49:29,547 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:29] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 21:49:41,175 - INFO - Cerrando procesos...
+2025-04-06 21:49:41,182 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:41] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:49:41,289 - INFO - Cerrando procesos...
+2025-04-06 21:49:41,295 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:41] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-06 21:49:41,549 - INFO - Cerrando procesos...
+2025-04-06 21:49:41,550 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:49:41,710 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:49:41,716 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:49:41,718 - INFO - Cerrando procesos...
+2025-04-06 21:49:41,719 - INFO - 127.0.0.1 - - [06/Apr/2025 21:49:41] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:50:47,119 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:50:47,120 - DEBUG - CoUninitialize() done.
+2025-04-06 21:50:53,622 - INFO - Registrando los blueprints...
+2025-04-06 21:50:53,635 - INFO - Blueprints registrados correctamente.
+2025-04-06 21:50:53,654 - INFO - Iniciando la aplicación Flask...
+2025-04-06 21:50:53,794 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 21:50:53,796 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 21:50:57,716 - INFO - Cerrando procesos...
+2025-04-06 21:50:57,726 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 21:50:57,730 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 21:50:57,733 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:50:57,734 - DEBUG - CoUninitialize() done.
+2025-04-06 21:50:58,098 - DEBUG - Calling CoUninitialize()
+2025-04-06 21:50:58,099 - DEBUG - CoUninitialize() done.
+2025-04-06 21:50:58,418 - INFO - 127.0.0.1 - - [06/Apr/2025 21:50:58] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:50:58,784 - INFO - Cerrando procesos...
+2025-04-06 21:50:58,787 - INFO - 127.0.0.1 - - [06/Apr/2025 21:50:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:50:58,834 - INFO - Cerrando procesos...
+2025-04-06 21:50:58,838 - INFO - 127.0.0.1 - - [06/Apr/2025 21:50:58] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:50:59,181 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:50:59,182 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:50:59,185 - INFO - Cerrando procesos...
+2025-04-06 21:50:59,186 - INFO - 127.0.0.1 - - [06/Apr/2025 21:50:59] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:51:15,643 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:51:17,007 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 21:51:17,008 - INFO - Cerrando procesos...
+2025-04-06 21:51:17,011 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:17] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 21:51:38,119 - INFO - Cerrando procesos...
+2025-04-06 21:51:38,129 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:38] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 21:51:38,201 - INFO - Cerrando procesos...
+2025-04-06 21:51:38,231 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:38] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-06 21:51:38,406 - INFO - Cerrando procesos...
+2025-04-06 21:51:38,409 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:38] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:51:38,563 - INFO - Cerrando procesos...
+2025-04-06 21:51:38,565 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:38] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:51:38,618 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:51:38,627 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:51:38,629 - INFO - Cerrando procesos...
+2025-04-06 21:51:38,630 - INFO - 127.0.0.1 - - [06/Apr/2025 21:51:38] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:52:35,680 - INFO - Cerrando procesos...
+2025-04-06 21:52:35,688 - INFO - 127.0.0.1 - - [06/Apr/2025 21:52:35] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-06 21:52:35,801 - INFO - Cerrando procesos...
+2025-04-06 21:52:35,806 - INFO - 127.0.0.1 - - [06/Apr/2025 21:52:35] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:52:35,939 - INFO - Cerrando procesos...
+2025-04-06 21:52:35,942 - INFO - 127.0.0.1 - - [06/Apr/2025 21:52:35] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:52:36,111 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:52:36,114 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:52:36,116 - INFO - Cerrando procesos...
+2025-04-06 21:52:36,117 - INFO - 127.0.0.1 - - [06/Apr/2025 21:52:36] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 21:54:19,999 - INFO - Intentando ejecutar el script: cargar_dwg.py
+2025-04-06 21:54:20,000 - INFO - Ruta del script: ./cargar_dwg.py
+2025-04-06 21:54:20,007 - INFO - Ejecutando el script 'cargar_dwg.py'...
+2025-04-06 21:55:32,604 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 21:55:34,054 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 21:55:34,056 - INFO - Cerrando procesos...
+2025-04-06 21:55:34,058 - INFO - 127.0.0.1 - - [06/Apr/2025 21:55:34] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 21:59:42,484 - INFO - Cerrando procesos...
+2025-04-06 21:59:42,485 - INFO - 127.0.0.1 - - [06/Apr/2025 21:59:42] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-06 21:59:42,890 - INFO - Cerrando procesos...
+2025-04-06 21:59:42,893 - INFO - 127.0.0.1 - - [06/Apr/2025 21:59:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 21:59:42,895 - INFO - Cerrando procesos...
+2025-04-06 21:59:42,970 - INFO - 127.0.0.1 - - [06/Apr/2025 21:59:42] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 21:59:43,132 - INFO - Listando los scripts en el directorio...
+2025-04-06 21:59:43,133 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 21:59:43,136 - INFO - Cerrando procesos...
+2025-04-06 21:59:43,137 - INFO - 127.0.0.1 - - [06/Apr/2025 21:59:43] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 22:00:00,788 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 22:00:02,360 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 22:00:02,361 - INFO - Cerrando procesos...
+2025-04-06 22:00:02,363 - INFO - 127.0.0.1 - - [06/Apr/2025 22:00:02] "[35m[1mPOST /cargar_datos HTTP/1.1[0m" 500 -
+2025-04-06 22:00:09,777 - DEBUG - Calling CoUninitialize()
+2025-04-06 22:00:09,783 - DEBUG - CoUninitialize() done.
+2025-04-06 22:00:15,066 - INFO - Registrando los blueprints...
+2025-04-06 22:00:15,078 - INFO - Blueprints registrados correctamente.
+2025-04-06 22:00:15,105 - INFO - Iniciando la aplicación Flask...
+2025-04-06 22:00:15,248 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 22:00:15,249 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 22:01:55,360 - INFO - Cerrando procesos...
+2025-04-06 22:01:55,370 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 22:01:55,372 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 22:01:55,374 - DEBUG - Calling CoUninitialize()
+2025-04-06 22:01:55,374 - DEBUG - CoUninitialize() done.
+2025-04-06 22:01:55,699 - DEBUG - Calling CoUninitialize()
+2025-04-06 22:01:55,699 - DEBUG - CoUninitialize() done.
+2025-04-06 22:01:56,013 - INFO - 127.0.0.1 - - [06/Apr/2025 22:01:56] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-06 22:01:56,465 - INFO - Cerrando procesos...
+2025-04-06 22:01:56,468 - INFO - 127.0.0.1 - - [06/Apr/2025 22:01:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 22:01:56,471 - INFO - Cerrando procesos...
+2025-04-06 22:01:56,483 - INFO - 127.0.0.1 - - [06/Apr/2025 22:01:56] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 22:01:56,866 - INFO - Listando los scripts en el directorio...
+2025-04-06 22:01:56,867 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 22:01:56,869 - INFO - Cerrando procesos...
+2025-04-06 22:01:56,870 - INFO - 127.0.0.1 - - [06/Apr/2025 22:01:56] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 22:02:09,603 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 22:02:10,584 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 22:02:10,585 - WARNING - Continuando con la conexión a AutoCAD a pesar del error en la configuración del Path de Civil 3D.
+2025-04-06 22:02:10,590 - INFO - Conexión con AutoCAD establecida.
+2025-04-06 22:02:10,613 - WARNING - Error COM al conectar con Civil 3D. Intentando conexión básica con AutoCAD.
+2025-04-06 22:02:10,613 - DEBUG - Creando punto 1 en (6351649.062, 286463.335, 99.18) con descripción: V1
+2025-04-06 22:02:10,614 - DEBUG - Punto APoint creado: APoint(6351649.06, 286463.34, 99.18)
+2025-04-06 22:02:10,617 - ERROR - Error al crear punto 1: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,618 - DEBUG - Creando punto 2 en (6351584.622, 286441.112, 101.015) con descripción: V2
+2025-04-06 22:02:10,619 - DEBUG - Punto APoint creado: APoint(6351584.62, 286441.11, 101.02)
+2025-04-06 22:02:10,620 - ERROR - Error al crear punto 2: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,621 - DEBUG - Creando punto 3 en (6351524.163, 286419.634, 104.162) con descripción: V5
+2025-04-06 22:02:10,622 - DEBUG - Punto APoint creado: APoint(6351524.16, 286419.63, 104.16)
+2025-04-06 22:02:10,624 - ERROR - Error al crear punto 3: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,625 - DEBUG - Creando punto 4 en (6351509.835, 286412.654, 104.725) con descripción: V6
+2025-04-06 22:02:10,625 - DEBUG - Punto APoint creado: APoint(6351509.83, 286412.65, 104.72)
+2025-04-06 22:02:10,627 - ERROR - Error al crear punto 4: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,628 - DEBUG - Creando punto 5 en (6351493.247, 286404.878, 105.152) con descripción: V7
+2025-04-06 22:02:10,628 - DEBUG - Punto APoint creado: APoint(6351493.25, 286404.88, 105.15)
+2025-04-06 22:02:10,631 - ERROR - Error al crear punto 5: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,637 - DEBUG - Creando punto 6 en (6351456.567, 286378.36, 106.576) con descripción: V8
+2025-04-06 22:02:10,637 - DEBUG - Punto APoint creado: APoint(6351456.57, 286378.36, 106.58)
+2025-04-06 22:02:10,639 - ERROR - Error al crear punto 6: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,640 - DEBUG - Creando punto 7 en (6351431.051, 286368.849, 108.444) con descripción: V9
+2025-04-06 22:02:10,641 - DEBUG - Punto APoint creado: APoint(6351431.05, 286368.85, 108.44)
+2025-04-06 22:02:10,643 - ERROR - Error al crear punto 7: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,643 - DEBUG - Creando punto 8 en (6351422.134, 286361.205, 108.217) con descripción: V10
+2025-04-06 22:02:10,644 - DEBUG - Punto APoint creado: APoint(6351422.13, 286361.21, 108.22)
+2025-04-06 22:02:10,646 - ERROR - Error al crear punto 8: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,650 - DEBUG - Creando punto 9 en (6351317.94, 286280.707, 117.293) con descripción: V16
+2025-04-06 22:02:10,650 - DEBUG - Punto APoint creado: APoint(6351317.94, 286280.71, 117.29)
+2025-04-06 22:02:10,653 - ERROR - Error al crear punto 9: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,653 - DEBUG - Creando punto 10 en (6351248.778, 286276.941, 124.938) con descripción: V18
+2025-04-06 22:02:10,654 - DEBUG - Punto APoint creado: APoint(6351248.78, 286276.94, 124.94)
+2025-04-06 22:02:10,656 - ERROR - Error al crear punto 10: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,657 - DEBUG - Creando punto 11 en (6351410.938, 286338.639, 110.511) con descripción: V11
+2025-04-06 22:02:10,657 - DEBUG - Punto APoint creado: APoint(6351410.94, 286338.64, 110.51)
+2025-04-06 22:02:10,660 - ERROR - Error al crear punto 11: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,660 - DEBUG - Creando punto 12 en (6351403.525, 286323.656, 111.871) con descripción: V12
+2025-04-06 22:02:10,661 - DEBUG - Punto APoint creado: APoint(6351403.53, 286323.66, 111.87)
+2025-04-06 22:02:10,667 - ERROR - Error al crear punto 12: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,668 - DEBUG - Creando punto 13 en (6351371.81, 286312.211, 113.862) con descripción: V14
+2025-04-06 22:02:10,669 - DEBUG - Punto APoint creado: APoint(6351371.81, 286312.21, 113.86)
+2025-04-06 22:02:10,671 - ERROR - Error al crear punto 13: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,672 - DEBUG - Creando punto 14 en (6351286.266, 286270.195, 119.541) con descripción: V17
+2025-04-06 22:02:10,674 - DEBUG - Punto APoint creado: APoint(6351286.27, 286270.20, 119.54)
+2025-04-06 22:02:10,676 - ERROR - Error al crear punto 14: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,676 - DEBUG - Creando punto 15 en (6351400.361, 286317.492, 112.345) con descripción: V13
+2025-04-06 22:02:10,677 - DEBUG - Punto APoint creado: APoint(6351400.36, 286317.49, 112.34)
+2025-04-06 22:02:10,683 - ERROR - Error al crear punto 15: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,683 - DEBUG - Creando punto 16 en (6351778.627, 286471.3, 95.282) con descripción: V0
+2025-04-06 22:02:10,684 - DEBUG - Punto APoint creado: APoint(6351778.63, 286471.30, 95.28)
+2025-04-06 22:02:10,686 - ERROR - Error al crear punto 16: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,687 - DEBUG - Creando punto 17 en (6351727.87, 286469.897, 96.906) con descripción: VA1
+2025-04-06 22:02:10,687 - DEBUG - Punto APoint creado: APoint(6351727.87, 286469.90, 96.91)
+2025-04-06 22:02:10,689 - ERROR - Error al crear punto 17: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:02:10,690 - INFO - Proceso de creación de puntos completado (solo AutoCAD). La creación de tuberías se omitió.
+2025-04-06 22:02:10,692 - INFO - Cerrando procesos...
+2025-04-06 22:02:10,692 - INFO - 127.0.0.1 - - [06/Apr/2025 22:02:10] "POST /cargar_datos HTTP/1.1" 200 -
+2025-04-06 22:06:45,545 - DEBUG - Calling CoUninitialize()
+2025-04-06 22:06:45,546 - DEBUG - CoUninitialize() done.
+2025-04-06 22:11:53,294 - INFO - Registrando los blueprints...
+2025-04-06 22:11:53,341 - INFO - Blueprints registrados correctamente.
+2025-04-06 22:11:53,409 - INFO - Iniciando la aplicación Flask...
+2025-04-06 22:11:53,563 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 22:11:53,570 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 22:11:57,695 - INFO - Cerrando procesos...
+2025-04-06 22:11:57,702 - INFO - Proceso de Civil 3D terminado.
+2025-04-06 22:11:57,703 - INFO - Finalización del proceso de Civil 3D.
+2025-04-06 22:11:57,705 - DEBUG - Calling CoUninitialize()
+2025-04-06 22:11:57,705 - DEBUG - CoUninitialize() done.
+2025-04-06 22:11:58,225 - DEBUG - Calling CoUninitialize()
+2025-04-06 22:11:58,227 - DEBUG - CoUninitialize() done.
+2025-04-06 22:11:58,588 - INFO - 127.0.0.1 - - [06/Apr/2025 22:11:58] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-06 22:11:58,926 - INFO - Cerrando procesos...
+2025-04-06 22:11:58,933 - INFO - 127.0.0.1 - - [06/Apr/2025 22:11:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 22:11:58,988 - INFO - Cerrando procesos...
+2025-04-06 22:11:58,991 - INFO - 127.0.0.1 - - [06/Apr/2025 22:11:58] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 22:11:59,454 - INFO - Listando los scripts en el directorio...
+2025-04-06 22:11:59,461 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 22:11:59,465 - INFO - Cerrando procesos...
+2025-04-06 22:11:59,480 - INFO - 127.0.0.1 - - [06/Apr/2025 22:11:59] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 22:12:15,710 - INFO - Inicio de la ruta /cargar_datos
+2025-04-06 22:12:17,937 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-06 22:12:17,939 - WARNING - Continuando con la conexión a AutoCAD a pesar del error en la configuración del Path de Civil 3D.
+2025-04-06 22:12:17,944 - INFO - Conexión con AutoCAD establecida.
+2025-04-06 22:12:17,986 - WARNING - Error COM al conectar con Civil 3D. Intentando conexión básica con AutoCAD.
+2025-04-06 22:12:17,988 - DEBUG - Creando punto 1 en (6351649.062, 286463.335, 99.18) con descripción: V1
+2025-04-06 22:12:17,990 - DEBUG - Punto APoint creado: APoint(6351649.06, 286463.34, 99.18)
+2025-04-06 22:12:18,005 - ERROR - Error al crear punto 1: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,005 - DEBUG - Creando punto 2 en (6351584.622, 286441.112, 101.015) con descripción: V2
+2025-04-06 22:12:18,006 - DEBUG - Punto APoint creado: APoint(6351584.62, 286441.11, 101.02)
+2025-04-06 22:12:18,008 - ERROR - Error al crear punto 2: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,009 - DEBUG - Creando punto 3 en (6351524.163, 286419.634, 104.162) con descripción: V5
+2025-04-06 22:12:18,010 - DEBUG - Punto APoint creado: APoint(6351524.16, 286419.63, 104.16)
+2025-04-06 22:12:18,012 - ERROR - Error al crear punto 3: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,012 - DEBUG - Creando punto 4 en (6351509.835, 286412.654, 104.725) con descripción: V6
+2025-04-06 22:12:18,013 - DEBUG - Punto APoint creado: APoint(6351509.83, 286412.65, 104.72)
+2025-04-06 22:12:18,015 - ERROR - Error al crear punto 4: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,015 - DEBUG - Creando punto 5 en (6351493.247, 286404.878, 105.152) con descripción: V7
+2025-04-06 22:12:18,016 - DEBUG - Punto APoint creado: APoint(6351493.25, 286404.88, 105.15)
+2025-04-06 22:12:18,024 - ERROR - Error al crear punto 5: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,025 - DEBUG - Creando punto 6 en (6351456.567, 286378.36, 106.576) con descripción: V8
+2025-04-06 22:12:18,025 - DEBUG - Punto APoint creado: APoint(6351456.57, 286378.36, 106.58)
+2025-04-06 22:12:18,028 - ERROR - Error al crear punto 6: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,028 - DEBUG - Creando punto 7 en (6351431.051, 286368.849, 108.444) con descripción: V9
+2025-04-06 22:12:18,029 - DEBUG - Punto APoint creado: APoint(6351431.05, 286368.85, 108.44)
+2025-04-06 22:12:18,031 - ERROR - Error al crear punto 7: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,032 - DEBUG - Creando punto 8 en (6351422.134, 286361.205, 108.217) con descripción: V10
+2025-04-06 22:12:18,033 - DEBUG - Punto APoint creado: APoint(6351422.13, 286361.21, 108.22)
+2025-04-06 22:12:18,035 - ERROR - Error al crear punto 8: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,036 - DEBUG - Creando punto 9 en (6351317.94, 286280.707, 117.293) con descripción: V16
+2025-04-06 22:12:18,036 - DEBUG - Punto APoint creado: APoint(6351317.94, 286280.71, 117.29)
+2025-04-06 22:12:18,039 - ERROR - Error al crear punto 9: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,040 - DEBUG - Creando punto 10 en (6351248.778, 286276.941, 124.938) con descripción: V18
+2025-04-06 22:12:18,047 - DEBUG - Punto APoint creado: APoint(6351248.78, 286276.94, 124.94)
+2025-04-06 22:12:18,049 - ERROR - Error al crear punto 10: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,049 - DEBUG - Creando punto 11 en (6351410.938, 286338.639, 110.511) con descripción: V11
+2025-04-06 22:12:18,050 - DEBUG - Punto APoint creado: APoint(6351410.94, 286338.64, 110.51)
+2025-04-06 22:12:18,053 - ERROR - Error al crear punto 11: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,054 - DEBUG - Creando punto 12 en (6351403.525, 286323.656, 111.871) con descripción: V12
+2025-04-06 22:12:18,055 - DEBUG - Punto APoint creado: APoint(6351403.53, 286323.66, 111.87)
+2025-04-06 22:12:18,060 - ERROR - Error al crear punto 12: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,061 - DEBUG - Creando punto 13 en (6351371.81, 286312.211, 113.862) con descripción: V14
+2025-04-06 22:12:18,062 - DEBUG - Punto APoint creado: APoint(6351371.81, 286312.21, 113.86)
+2025-04-06 22:12:18,063 - ERROR - Error al crear punto 13: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,064 - DEBUG - Creando punto 14 en (6351286.266, 286270.195, 119.541) con descripción: V17
+2025-04-06 22:12:18,065 - DEBUG - Punto APoint creado: APoint(6351286.27, 286270.20, 119.54)
+2025-04-06 22:12:18,067 - ERROR - Error al crear punto 14: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,068 - DEBUG - Creando punto 15 en (6351400.361, 286317.492, 112.345) con descripción: V13
+2025-04-06 22:12:18,069 - DEBUG - Punto APoint creado: APoint(6351400.36, 286317.49, 112.34)
+2025-04-06 22:12:18,075 - ERROR - Error al crear punto 15: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,075 - DEBUG - Creando punto 16 en (6351778.627, 286471.3, 95.282) con descripción: V0
+2025-04-06 22:12:18,076 - DEBUG - Punto APoint creado: APoint(6351778.63, 286471.30, 95.28)
+2025-04-06 22:12:18,078 - ERROR - Error al crear punto 16: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,079 - DEBUG - Creando punto 17 en (6351727.87, 286469.897, 96.906) con descripción: VA1
+2025-04-06 22:12:18,079 - DEBUG - Punto APoint creado: APoint(6351727.87, 286469.90, 96.91)
+2025-04-06 22:12:18,081 - ERROR - Error al crear punto 17: [WinError -2147221005] Cadena clase no válida
+2025-04-06 22:12:18,082 - INFO - Proceso de creación de puntos completado (solo AutoCAD). La creación de tuberías se omitió.
+2025-04-06 22:12:18,083 - INFO - Cerrando procesos...
+2025-04-06 22:12:18,084 - INFO - 127.0.0.1 - - [06/Apr/2025 22:12:18] "POST /cargar_datos HTTP/1.1" 200 -
+2025-04-06 22:12:27,073 - INFO - Cerrando procesos...
+2025-04-06 22:12:27,078 - INFO - 127.0.0.1 - - [06/Apr/2025 22:12:27] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-06 22:12:27,354 - INFO - Cerrando procesos...
+2025-04-06 22:12:27,375 - INFO - 127.0.0.1 - - [06/Apr/2025 22:12:27] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-06 22:12:27,401 - INFO - Cerrando procesos...
+2025-04-06 22:12:27,507 - INFO - 127.0.0.1 - - [06/Apr/2025 22:12:27] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-06 22:12:27,542 - INFO - Listando los scripts en el directorio...
+2025-04-06 22:12:27,605 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-06 22:12:27,607 - INFO - Cerrando procesos...
+2025-04-06 22:12:27,608 - INFO - 127.0.0.1 - - [06/Apr/2025 22:12:27] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-06 22:15:12,119 - INFO - Cerrando procesos...
+2025-04-06 22:15:47,858 - INFO - Intentando ejecutar el script: cargar_dwg.py
+2025-04-06 22:23:34,294 - INFO - Cerrando procesos...
+2025-04-06 22:23:34,356 - INFO - Obteniendo perfiles de AutoCAD...
+2025-04-06 22:24:36,173 - DEBUG - Comando enviado a la cola: {'action': 'seleccionar_objetos'}
+2025-04-07 19:46:22,594 - INFO - Registrando los blueprints...
+2025-04-07 19:46:22,642 - INFO - Blueprints registrados correctamente.
+2025-04-07 19:46:22,654 - INFO - Iniciando la aplicación Flask...
+2025-04-07 19:46:22,904 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 19:46:22,908 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 19:47:05,823 - INFO - Cerrando procesos...
+2025-04-07 19:47:09,685 - INFO - Cerrando procesos...
+2025-04-07 19:47:18,854 - INFO - Cerrando procesos...
+2025-04-07 19:47:38,381 - INFO - Cerrando procesos...
+2025-04-07 19:50:34,077 - INFO - Inicio de la ruta /cargar_datos
+2025-04-07 19:52:03,323 - INFO - Cerrando procesos...
+2025-04-07 19:52:09,805 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-07 20:01:12,665 - INFO - Cerrando procesos...
+2025-04-07 20:21:32,263 - INFO - Cerrando procesos...
+2025-04-07 20:30:00,214 - INFO - Registrando los blueprints...
+2025-04-07 20:30:00,236 - INFO - Blueprints registrados correctamente.
+2025-04-07 20:30:00,262 - INFO - Iniciando la aplicación Flask...
+2025-04-07 20:30:00,435 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 20:30:00,438 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 20:32:40,823 - INFO - Cerrando procesos...
+2025-04-07 20:36:49,793 - INFO - Cerrando procesos...
+2025-04-07 20:38:55,292 - INFO - Cerrando procesos...
+2025-04-07 20:39:09,361 - INFO - Cerrando procesos...
+2025-04-07 20:43:45,100 - INFO - Cerrando procesos...
+2025-04-07 20:55:22,387 - INFO - Registrando los blueprints...
+2025-04-07 20:55:22,400 - INFO - Blueprints registrados correctamente.
+2025-04-07 20:55:22,410 - INFO - Iniciando la aplicación Flask...
+2025-04-07 20:55:22,531 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 20:55:22,534 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 20:56:04,241 - INFO - Cerrando procesos...
+2025-04-07 20:56:31,777 - INFO - Cerrando procesos...
+2025-04-07 20:56:51,698 - INFO - Cerrando procesos...
+2025-04-07 20:59:06,129 - INFO - Cerrando procesos...
+2025-04-07 21:01:49,971 - INFO - Cerrando procesos...
+2025-04-07 21:02:05,897 - INFO - Cerrando procesos...
+2025-04-07 21:04:06,514 - INFO - Proceso de Civil 3D terminado.
+2025-04-07 21:04:06,519 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 21:04:06,525 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:04:06,527 - DEBUG - CoUninitialize() done.
+2025-04-07 21:04:06,861 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:04:06,861 - DEBUG - CoUninitialize() done.
+2025-04-07 21:04:07,152 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:07] "GET / HTTP/1.1" 200 -
+2025-04-07 21:04:07,152 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:07] "GET / HTTP/1.1" 200 -
+2025-04-07 21:04:07,153 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:07] "GET / HTTP/1.1" 200 -
+2025-04-07 21:04:07,153 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:07] "GET / HTTP/1.1" 200 -
+2025-04-07 21:04:07,153 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:07] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 21:04:07,153 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:07] "GET / HTTP/1.1" 200 -
+2025-04-07 21:04:09,034 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:04:09,036 - DEBUG - CoUninitialize() done.
+2025-04-07 21:04:34,881 - INFO - Registrando los blueprints...
+2025-04-07 21:04:34,898 - INFO - Blueprints registrados correctamente.
+2025-04-07 21:04:34,928 - INFO - Iniciando la aplicación Flask...
+2025-04-07 21:04:35,034 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 21:04:35,037 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 21:04:52,221 - INFO - Cerrando procesos...
+2025-04-07 21:04:52,227 - INFO - Proceso de Civil 3D terminado.
+2025-04-07 21:04:52,229 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 21:04:52,231 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:04:52,232 - DEBUG - CoUninitialize() done.
+2025-04-07 21:04:52,571 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:04:52,572 - DEBUG - CoUninitialize() done.
+2025-04-07 21:04:52,878 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:52] "GET / HTTP/1.1" 200 -
+2025-04-07 21:04:53,483 - INFO - Cerrando procesos...
+2025-04-07 21:04:53,485 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:53] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-07 21:04:53,840 - INFO - Cerrando procesos...
+2025-04-07 21:04:53,842 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:53] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-07 21:04:54,170 - INFO - Listando los scripts en el directorio...
+2025-04-07 21:04:54,171 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 21:04:54,174 - INFO - Cerrando procesos...
+2025-04-07 21:04:54,175 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:54] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 21:04:54,192 - INFO - Cerrando procesos...
+2025-04-07 21:04:54,193 - INFO - 127.0.0.1 - - [07/Apr/2025 21:04:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-07 21:06:21,788 - INFO - Inicio de la ruta /cargar_datos
+2025-04-07 21:06:25,262 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-07 21:06:25,264 - WARNING - Continuando con la conexión a AutoCAD a pesar del error en la configuración del Path de Civil 3D.
+2025-04-07 21:06:25,271 - INFO - Conexión con AutoCAD establecida.
+2025-04-07 21:06:25,284 - WARNING - Error COM al conectar con Civil 3D. Intentando conexión básica con AutoCAD.
+2025-04-07 21:06:25,285 - DEBUG - Creando punto 1 en (6351649.062, 286463.335, 99.18) con descripción: V1
+2025-04-07 21:06:25,286 - DEBUG - Punto APoint creado: APoint(6351649.06, 286463.34, 99.18)
+2025-04-07 21:06:25,287 - ERROR - Error al crear punto 1: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,288 - DEBUG - Creando punto 2 en (6351584.622, 286441.112, 101.015) con descripción: V2
+2025-04-07 21:06:25,289 - DEBUG - Punto APoint creado: APoint(6351584.62, 286441.11, 101.02)
+2025-04-07 21:06:25,290 - ERROR - Error al crear punto 2: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,291 - DEBUG - Creando punto 3 en (6351524.163, 286419.634, 104.162) con descripción: V5
+2025-04-07 21:06:25,292 - DEBUG - Punto APoint creado: APoint(6351524.16, 286419.63, 104.16)
+2025-04-07 21:06:25,293 - ERROR - Error al crear punto 3: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,294 - DEBUG - Creando punto 4 en (6351509.835, 286412.654, 104.725) con descripción: V6
+2025-04-07 21:06:25,299 - DEBUG - Punto APoint creado: APoint(6351509.83, 286412.65, 104.72)
+2025-04-07 21:06:25,301 - ERROR - Error al crear punto 4: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,301 - DEBUG - Creando punto 5 en (6351493.247, 286404.878, 105.152) con descripción: V7
+2025-04-07 21:06:25,302 - DEBUG - Punto APoint creado: APoint(6351493.25, 286404.88, 105.15)
+2025-04-07 21:06:25,304 - ERROR - Error al crear punto 5: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,305 - DEBUG - Creando punto 6 en (6351456.567, 286378.36, 106.576) con descripción: V8
+2025-04-07 21:06:25,305 - DEBUG - Punto APoint creado: APoint(6351456.57, 286378.36, 106.58)
+2025-04-07 21:06:25,307 - ERROR - Error al crear punto 6: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,308 - DEBUG - Creando punto 7 en (6351431.051, 286368.849, 108.444) con descripción: V9
+2025-04-07 21:06:25,309 - DEBUG - Punto APoint creado: APoint(6351431.05, 286368.85, 108.44)
+2025-04-07 21:06:25,314 - ERROR - Error al crear punto 7: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,317 - DEBUG - Creando punto 8 en (6351422.134, 286361.205, 108.217) con descripción: V10
+2025-04-07 21:06:25,319 - DEBUG - Punto APoint creado: APoint(6351422.13, 286361.21, 108.22)
+2025-04-07 21:06:25,321 - ERROR - Error al crear punto 8: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,322 - DEBUG - Creando punto 9 en (6351317.94, 286280.707, 117.293) con descripción: V16
+2025-04-07 21:06:25,323 - DEBUG - Punto APoint creado: APoint(6351317.94, 286280.71, 117.29)
+2025-04-07 21:06:25,325 - ERROR - Error al crear punto 9: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,326 - DEBUG - Creando punto 10 en (6351248.778, 286276.941, 124.938) con descripción: V18
+2025-04-07 21:06:25,330 - DEBUG - Punto APoint creado: APoint(6351248.78, 286276.94, 124.94)
+2025-04-07 21:06:25,338 - ERROR - Error al crear punto 10: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,354 - DEBUG - Creando punto 11 en (6351410.938, 286338.639, 110.511) con descripción: V11
+2025-04-07 21:06:25,356 - DEBUG - Punto APoint creado: APoint(6351410.94, 286338.64, 110.51)
+2025-04-07 21:06:25,372 - ERROR - Error al crear punto 11: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,379 - DEBUG - Creando punto 12 en (6351403.525, 286323.656, 111.871) con descripción: V12
+2025-04-07 21:06:25,381 - DEBUG - Punto APoint creado: APoint(6351403.53, 286323.66, 111.87)
+2025-04-07 21:06:25,384 - ERROR - Error al crear punto 12: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,386 - DEBUG - Creando punto 13 en (6351371.81, 286312.211, 113.862) con descripción: V14
+2025-04-07 21:06:25,387 - DEBUG - Punto APoint creado: APoint(6351371.81, 286312.21, 113.86)
+2025-04-07 21:06:25,389 - ERROR - Error al crear punto 13: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,390 - DEBUG - Creando punto 14 en (6351286.266, 286270.195, 119.541) con descripción: V17
+2025-04-07 21:06:25,391 - DEBUG - Punto APoint creado: APoint(6351286.27, 286270.20, 119.54)
+2025-04-07 21:06:25,394 - ERROR - Error al crear punto 14: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,396 - DEBUG - Creando punto 15 en (6351400.361, 286317.492, 112.345) con descripción: V13
+2025-04-07 21:06:25,399 - DEBUG - Punto APoint creado: APoint(6351400.36, 286317.49, 112.34)
+2025-04-07 21:06:25,403 - ERROR - Error al crear punto 15: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,404 - DEBUG - Creando punto 16 en (6351778.627, 286471.3, 95.282) con descripción: V0
+2025-04-07 21:06:25,405 - DEBUG - Punto APoint creado: APoint(6351778.63, 286471.30, 95.28)
+2025-04-07 21:06:25,407 - ERROR - Error al crear punto 16: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,407 - DEBUG - Creando punto 17 en (6351727.87, 286469.897, 96.906) con descripción: VA1
+2025-04-07 21:06:25,408 - DEBUG - Punto APoint creado: APoint(6351727.87, 286469.90, 96.91)
+2025-04-07 21:06:25,410 - ERROR - Error al crear punto 17: [WinError -2147221005] Cadena clase no válida
+2025-04-07 21:06:25,411 - INFO - Proceso de creación de puntos completado (solo AutoCAD). La creación de tuberías se omitió.
+2025-04-07 21:06:25,412 - INFO - Cerrando procesos...
+2025-04-07 21:06:25,415 - INFO - 127.0.0.1 - - [07/Apr/2025 21:06:25] "POST /cargar_datos HTTP/1.1" 200 -
+2025-04-07 21:07:27,107 - INFO - Cerrando procesos...
+2025-04-07 21:07:27,115 - INFO - 127.0.0.1 - - [07/Apr/2025 21:07:27] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-07 21:07:27,492 - INFO - Cerrando procesos...
+2025-04-07 21:07:27,516 - INFO - 127.0.0.1 - - [07/Apr/2025 21:07:27] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 21:07:27,697 - INFO - Cerrando procesos...
+2025-04-07 21:07:27,699 - INFO - 127.0.0.1 - - [07/Apr/2025 21:07:27] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 21:07:27,803 - INFO - Listando los scripts en el directorio...
+2025-04-07 21:07:27,809 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 21:07:27,810 - INFO - Cerrando procesos...
+2025-04-07 21:07:27,810 - INFO - 127.0.0.1 - - [07/Apr/2025 21:07:27] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 21:50:21,908 - INFO - Registrando los blueprints...
+2025-04-07 21:50:21,921 - INFO - Blueprints registrados correctamente.
+2025-04-07 21:50:21,929 - INFO - Iniciando la aplicación Flask...
+2025-04-07 21:50:22,125 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 21:50:22,137 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 21:53:46,476 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 21:53:46,828 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:53:46,829 - DEBUG - CoUninitialize() done.
+2025-04-07 21:53:46,852 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:53:46,853 - DEBUG - CoUninitialize() done.
+2025-04-07 21:53:47,072 - DEBUG - Calling CoUninitialize()
+2025-04-07 21:53:47,073 - DEBUG - CoUninitialize() done.
+2025-04-07 22:50:21,447 - INFO - Registrando los blueprints...
+2025-04-07 22:50:21,460 - INFO - Blueprints registrados correctamente.
+2025-04-07 22:50:21,493 - INFO - Iniciando la aplicación Flask...
+2025-04-07 22:50:21,608 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 22:50:21,613 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 22:52:10,134 - INFO - Cerrando procesos...
+2025-04-07 22:52:53,332 - INFO - Cerrando procesos...
+2025-04-07 23:39:05,630 - INFO - Registrando los blueprints...
+2025-04-07 23:39:05,644 - INFO - Blueprints registrados correctamente.
+2025-04-07 23:39:05,670 - INFO - Iniciando la aplicación Flask...
+2025-04-07 23:39:05,850 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 23:39:05,852 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 23:40:17,337 - INFO - Cerrando procesos...
+2025-04-07 23:40:33,683 - INFO - Cerrando procesos...
+2025-04-07 23:41:13,222 - INFO - Cerrando procesos...
+2025-04-07 23:41:45,427 - INFO - Proceso de Civil 3D terminado.
+2025-04-07 23:41:45,429 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 23:41:45,429 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:41:45,430 - DEBUG - CoUninitialize() done.
+2025-04-07 23:41:45,604 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:41:45,604 - DEBUG - CoUninitialize() done.
+2025-04-07 23:41:45,753 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:45] "GET / HTTP/1.1" 200 -
+2025-04-07 23:41:45,754 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:45] "GET / HTTP/1.1" 200 -
+2025-04-07 23:41:45,754 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:45] "GET / HTTP/1.1" 200 -
+2025-04-07 23:41:45,968 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:41:45,969 - DEBUG - CoUninitialize() done.
+2025-04-07 23:41:49,585 - INFO - Registrando los blueprints...
+2025-04-07 23:41:49,598 - INFO - Blueprints registrados correctamente.
+2025-04-07 23:41:49,613 - INFO - Iniciando la aplicación Flask...
+2025-04-07 23:41:49,712 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 23:41:49,714 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 23:41:53,388 - INFO - Cerrando procesos...
+2025-04-07 23:41:53,398 - INFO - Proceso de Civil 3D terminado.
+2025-04-07 23:41:53,400 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 23:41:53,400 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:41:53,401 - DEBUG - CoUninitialize() done.
+2025-04-07 23:41:53,546 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:41:53,546 - DEBUG - CoUninitialize() done.
+2025-04-07 23:41:53,666 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:53] "GET / HTTP/1.1" 200 -
+2025-04-07 23:41:53,963 - INFO - Cerrando procesos...
+2025-04-07 23:41:53,966 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:53] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-07 23:41:54,396 - INFO - Cerrando procesos...
+2025-04-07 23:41:54,398 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:54] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-07 23:41:54,769 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:41:54,774 - INFO - Cerrando procesos...
+2025-04-07 23:41:54,776 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:41:54,783 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-07 23:41:54,786 - INFO - Cerrando procesos...
+2025-04-07 23:41:54,791 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:54] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:41:59,037 - INFO - Cerrando procesos...
+2025-04-07 23:41:59,040 - INFO - 127.0.0.1 - - [07/Apr/2025 23:41:59] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:42:18,420 - INFO - Inicio de la ruta /cargar_datos
+2025-04-07 23:42:21,930 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-07 23:42:21,932 - WARNING - Continuando con la conexión a AutoCAD a pesar del error en la configuración del Path de Civil 3D.
+2025-04-07 23:42:21,943 - INFO - Conexión con AutoCAD establecida.
+2025-04-07 23:42:21,962 - WARNING - Error COM al conectar con Civil 3D. Intentando conexión básica con AutoCAD.
+2025-04-07 23:42:21,963 - DEBUG - Creando punto 1 en (6351649.062, 286463.335, 99.18) con descripción: V1
+2025-04-07 23:42:21,964 - DEBUG - Punto APoint creado: APoint(6351649.06, 286463.34, 99.18)
+2025-04-07 23:42:21,968 - ERROR - Error al crear punto 1: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,969 - DEBUG - Creando punto 2 en (6351584.622, 286441.112, 101.015) con descripción: V2
+2025-04-07 23:42:21,970 - DEBUG - Punto APoint creado: APoint(6351584.62, 286441.11, 101.02)
+2025-04-07 23:42:21,972 - ERROR - Error al crear punto 2: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,972 - DEBUG - Creando punto 3 en (6351524.163, 286419.634, 104.162) con descripción: V5
+2025-04-07 23:42:21,973 - DEBUG - Punto APoint creado: APoint(6351524.16, 286419.63, 104.16)
+2025-04-07 23:42:21,975 - ERROR - Error al crear punto 3: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,975 - DEBUG - Creando punto 4 en (6351509.835, 286412.654, 104.725) con descripción: V6
+2025-04-07 23:42:21,976 - DEBUG - Punto APoint creado: APoint(6351509.83, 286412.65, 104.72)
+2025-04-07 23:42:21,978 - ERROR - Error al crear punto 4: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,979 - DEBUG - Creando punto 5 en (6351493.247, 286404.878, 105.152) con descripción: V7
+2025-04-07 23:42:21,979 - DEBUG - Punto APoint creado: APoint(6351493.25, 286404.88, 105.15)
+2025-04-07 23:42:21,981 - ERROR - Error al crear punto 5: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,987 - DEBUG - Creando punto 6 en (6351456.567, 286378.36, 106.576) con descripción: V8
+2025-04-07 23:42:21,987 - DEBUG - Punto APoint creado: APoint(6351456.57, 286378.36, 106.58)
+2025-04-07 23:42:21,989 - ERROR - Error al crear punto 6: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,990 - DEBUG - Creando punto 7 en (6351431.051, 286368.849, 108.444) con descripción: V9
+2025-04-07 23:42:21,991 - DEBUG - Punto APoint creado: APoint(6351431.05, 286368.85, 108.44)
+2025-04-07 23:42:21,993 - ERROR - Error al crear punto 7: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,993 - DEBUG - Creando punto 8 en (6351422.134, 286361.205, 108.217) con descripción: V10
+2025-04-07 23:42:21,994 - DEBUG - Punto APoint creado: APoint(6351422.13, 286361.21, 108.22)
+2025-04-07 23:42:21,997 - ERROR - Error al crear punto 8: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:21,999 - DEBUG - Creando punto 9 en (6351317.94, 286280.707, 117.293) con descripción: V16
+2025-04-07 23:42:22,000 - DEBUG - Punto APoint creado: APoint(6351317.94, 286280.71, 117.29)
+2025-04-07 23:42:22,002 - ERROR - Error al crear punto 9: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,003 - DEBUG - Creando punto 10 en (6351248.778, 286276.941, 124.938) con descripción: V18
+2025-04-07 23:42:22,003 - DEBUG - Punto APoint creado: APoint(6351248.78, 286276.94, 124.94)
+2025-04-07 23:42:22,005 - ERROR - Error al crear punto 10: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,006 - DEBUG - Creando punto 11 en (6351410.938, 286338.639, 110.511) con descripción: V11
+2025-04-07 23:42:22,006 - DEBUG - Punto APoint creado: APoint(6351410.94, 286338.64, 110.51)
+2025-04-07 23:42:22,009 - ERROR - Error al crear punto 11: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,010 - DEBUG - Creando punto 12 en (6351403.525, 286323.656, 111.871) con descripción: V12
+2025-04-07 23:42:22,011 - DEBUG - Punto APoint creado: APoint(6351403.53, 286323.66, 111.87)
+2025-04-07 23:42:22,024 - ERROR - Error al crear punto 12: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,025 - DEBUG - Creando punto 13 en (6351371.81, 286312.211, 113.862) con descripción: V14
+2025-04-07 23:42:22,026 - DEBUG - Punto APoint creado: APoint(6351371.81, 286312.21, 113.86)
+2025-04-07 23:42:22,029 - ERROR - Error al crear punto 13: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,029 - DEBUG - Creando punto 14 en (6351286.266, 286270.195, 119.541) con descripción: V17
+2025-04-07 23:42:22,030 - DEBUG - Punto APoint creado: APoint(6351286.27, 286270.20, 119.54)
+2025-04-07 23:42:22,032 - ERROR - Error al crear punto 14: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,032 - DEBUG - Creando punto 15 en (6351400.361, 286317.492, 112.345) con descripción: V13
+2025-04-07 23:42:22,033 - DEBUG - Punto APoint creado: APoint(6351400.36, 286317.49, 112.34)
+2025-04-07 23:42:22,035 - ERROR - Error al crear punto 15: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,035 - DEBUG - Creando punto 16 en (6351778.627, 286471.3, 95.282) con descripción: V0
+2025-04-07 23:42:22,036 - DEBUG - Punto APoint creado: APoint(6351778.63, 286471.30, 95.28)
+2025-04-07 23:42:22,038 - ERROR - Error al crear punto 16: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,038 - DEBUG - Creando punto 17 en (6351727.87, 286469.897, 96.906) con descripción: VA1
+2025-04-07 23:42:22,039 - DEBUG - Punto APoint creado: APoint(6351727.87, 286469.90, 96.91)
+2025-04-07 23:42:22,041 - ERROR - Error al crear punto 17: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:42:22,041 - INFO - Proceso de creación de puntos completado (solo AutoCAD). La creación de tuberías se omitió.
+2025-04-07 23:42:22,043 - INFO - Cerrando procesos...
+2025-04-07 23:42:22,051 - INFO - 127.0.0.1 - - [07/Apr/2025 23:42:22] "POST /cargar_datos HTTP/1.1" 200 -
+2025-04-07 23:42:39,119 - INFO - Cerrando procesos...
+2025-04-07 23:42:39,126 - INFO - 127.0.0.1 - - [07/Apr/2025 23:42:39] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-07 23:42:39,208 - INFO - Cerrando procesos...
+2025-04-07 23:42:39,241 - INFO - 127.0.0.1 - - [07/Apr/2025 23:42:39] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-07 23:42:39,459 - INFO - Cerrando procesos...
+2025-04-07 23:42:39,475 - INFO - 127.0.0.1 - - [07/Apr/2025 23:42:39] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:42:39,568 - INFO - Cerrando procesos...
+2025-04-07 23:42:39,619 - INFO - 127.0.0.1 - - [07/Apr/2025 23:42:39] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:42:39,651 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:42:39,717 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:42:39,719 - INFO - Cerrando procesos...
+2025-04-07 23:42:39,722 - INFO - 127.0.0.1 - - [07/Apr/2025 23:42:39] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:43:22,206 - INFO - Cerrando procesos...
+2025-04-07 23:43:22,208 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:22] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:43:22,438 - INFO - Cerrando procesos...
+2025-04-07 23:43:22,442 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:22] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:43:22,634 - INFO - Cerrando procesos...
+2025-04-07 23:43:22,635 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:43:22,677 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:43:22,698 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:43:22,700 - INFO - Cerrando procesos...
+2025-04-07 23:43:22,701 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:22] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:43:51,455 - INFO - Cerrando procesos...
+2025-04-07 23:43:51,456 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:51] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:43:51,740 - INFO - Cerrando procesos...
+2025-04-07 23:43:51,741 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:51] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:43:51,897 - INFO - Cerrando procesos...
+2025-04-07 23:43:51,898 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:51] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:43:51,991 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:43:51,992 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:43:51,993 - INFO - Cerrando procesos...
+2025-04-07 23:43:51,994 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:51] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:43:58,275 - INFO - Cerrando procesos...
+2025-04-07 23:43:58,277 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:58] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:43:58,531 - INFO - Cerrando procesos...
+2025-04-07 23:43:58,534 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:58] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:43:58,757 - INFO - Cerrando procesos...
+2025-04-07 23:43:58,770 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:58] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:43:58,834 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:43:58,846 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:43:58,848 - INFO - Cerrando procesos...
+2025-04-07 23:43:58,853 - INFO - 127.0.0.1 - - [07/Apr/2025 23:43:58] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:44:32,222 - INFO - Cerrando procesos...
+2025-04-07 23:44:32,223 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:32] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:44:32,498 - INFO - Cerrando procesos...
+2025-04-07 23:44:32,502 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:32] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:44:32,662 - INFO - Cerrando procesos...
+2025-04-07 23:44:32,665 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:44:32,699 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:44:32,791 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:44:32,795 - INFO - Cerrando procesos...
+2025-04-07 23:44:32,796 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:32] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:44:43,942 - INFO - Cerrando procesos...
+2025-04-07 23:44:43,943 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:43] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:44:44,202 - INFO - Cerrando procesos...
+2025-04-07 23:44:44,206 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:44] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:44:44,377 - INFO - Cerrando procesos...
+2025-04-07 23:44:44,378 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:44:44,427 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:44:44,445 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:44:44,447 - INFO - Cerrando procesos...
+2025-04-07 23:44:44,448 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:44] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:44:49,806 - INFO - Cerrando procesos...
+2025-04-07 23:44:49,808 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:49] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:44:50,071 - INFO - Cerrando procesos...
+2025-04-07 23:44:50,075 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:50] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:44:50,271 - INFO - Cerrando procesos...
+2025-04-07 23:44:50,279 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:50] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:44:50,318 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:44:50,374 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:44:50,376 - INFO - Cerrando procesos...
+2025-04-07 23:44:50,377 - INFO - 127.0.0.1 - - [07/Apr/2025 23:44:50] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:48:48,181 - INFO - Cerrando procesos...
+2025-04-07 23:48:48,193 - INFO - 127.0.0.1 - - [07/Apr/2025 23:48:48] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:48:48,863 - INFO - Cerrando procesos...
+2025-04-07 23:48:48,870 - INFO - 127.0.0.1 - - [07/Apr/2025 23:48:48] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:48:49,254 - INFO - Cerrando procesos...
+2025-04-07 23:48:49,260 - INFO - 127.0.0.1 - - [07/Apr/2025 23:48:49] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-07 23:48:49,803 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:48:49,806 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:48:49,812 - INFO - Cerrando procesos...
+2025-04-07 23:48:49,832 - INFO - 127.0.0.1 - - [07/Apr/2025 23:48:49] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:49:33,776 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:49:33,786 - DEBUG - CoUninitialize() done.
+2025-04-07 23:49:37,798 - INFO - Registrando los blueprints...
+2025-04-07 23:49:37,823 - INFO - Blueprints registrados correctamente.
+2025-04-07 23:49:37,881 - INFO - Iniciando la aplicación Flask...
+2025-04-07 23:49:38,079 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 23:49:38,090 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 23:49:41,730 - INFO - Cerrando procesos...
+2025-04-07 23:49:41,741 - INFO - Proceso de Civil 3D terminado.
+2025-04-07 23:49:41,742 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 23:49:41,743 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:49:41,743 - DEBUG - CoUninitialize() done.
+2025-04-07 23:49:41,885 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:49:41,885 - DEBUG - CoUninitialize() done.
+2025-04-07 23:49:42,011 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:42] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:49:42,340 - INFO - Cerrando procesos...
+2025-04-07 23:49:42,347 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:42] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:49:42,450 - INFO - Cerrando procesos...
+2025-04-07 23:49:42,454 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:42] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:49:42,864 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:49:42,868 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:49:42,869 - INFO - Cerrando procesos...
+2025-04-07 23:49:42,870 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:42] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:49:51,318 - INFO - Cerrando procesos...
+2025-04-07 23:49:51,319 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:51] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:49:51,438 - INFO - Cerrando procesos...
+2025-04-07 23:49:51,442 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:51] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:49:51,599 - INFO - Cerrando procesos...
+2025-04-07 23:49:51,603 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:51] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-07 23:49:51,723 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:49:51,725 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:49:51,727 - INFO - Cerrando procesos...
+2025-04-07 23:49:51,728 - INFO - 127.0.0.1 - - [07/Apr/2025 23:49:51] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:54:36,953 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:54:36,958 - DEBUG - CoUninitialize() done.
+2025-04-07 23:54:40,234 - INFO - Registrando los blueprints...
+2025-04-07 23:54:40,246 - INFO - Blueprints registrados correctamente.
+2025-04-07 23:54:40,258 - INFO - Iniciando la aplicación Flask...
+2025-04-07 23:54:40,385 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-07 23:54:40,387 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 23:54:46,100 - INFO - Cerrando procesos...
+2025-04-07 23:54:46,105 - INFO - Proceso de Civil 3D terminado.
+2025-04-07 23:54:46,105 - INFO - Finalización del proceso de Civil 3D.
+2025-04-07 23:54:46,107 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:54:46,110 - DEBUG - CoUninitialize() done.
+2025-04-07 23:54:46,231 - DEBUG - Calling CoUninitialize()
+2025-04-07 23:54:46,235 - DEBUG - CoUninitialize() done.
+2025-04-07 23:54:46,354 - INFO - 127.0.0.1 - - [07/Apr/2025 23:54:46] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-07 23:54:46,692 - INFO - Cerrando procesos...
+2025-04-07 23:54:46,693 - INFO - 127.0.0.1 - - [07/Apr/2025 23:54:46] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-07 23:54:46,852 - INFO - Cerrando procesos...
+2025-04-07 23:54:46,853 - INFO - 127.0.0.1 - - [07/Apr/2025 23:54:46] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-07 23:54:47,195 - INFO - Listando los scripts en el directorio...
+2025-04-07 23:54:47,196 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-07 23:54:47,200 - INFO - Cerrando procesos...
+2025-04-07 23:54:47,200 - INFO - 127.0.0.1 - - [07/Apr/2025 23:54:47] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-07 23:55:53,160 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-07 23:55:53,162 - INFO - Recursos COM liberados.
+2025-04-07 23:55:53,166 - INFO - Cerrando procesos...
+2025-04-07 23:55:53,192 - INFO - 127.0.0.1 - - [07/Apr/2025 23:55:53] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-07 23:56:18,504 - INFO - Inicio de la ruta /cargar_datos
+2025-04-07 23:56:21,455 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-07 23:56:21,456 - WARNING - Continuando con la conexión a AutoCAD a pesar del error en la configuración del Path de Civil 3D.
+2025-04-07 23:56:21,462 - INFO - Conexión con AutoCAD establecida.
+2025-04-07 23:56:21,488 - WARNING - Error COM al conectar con Civil 3D. Intentando conexión básica con AutoCAD.
+2025-04-07 23:56:21,490 - DEBUG - Creando punto 1 en (6351649.062, 286463.335, 99.18) con descripción: V1
+2025-04-07 23:56:21,493 - DEBUG - Punto APoint creado: APoint(6351649.06, 286463.34, 99.18)
+2025-04-07 23:56:21,501 - ERROR - Error al crear punto 1: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,505 - DEBUG - Creando punto 2 en (6351584.622, 286441.112, 101.015) con descripción: V2
+2025-04-07 23:56:21,506 - DEBUG - Punto APoint creado: APoint(6351584.62, 286441.11, 101.02)
+2025-04-07 23:56:21,511 - ERROR - Error al crear punto 2: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,517 - DEBUG - Creando punto 3 en (6351524.163, 286419.634, 104.162) con descripción: V5
+2025-04-07 23:56:21,520 - DEBUG - Punto APoint creado: APoint(6351524.16, 286419.63, 104.16)
+2025-04-07 23:56:21,524 - ERROR - Error al crear punto 3: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,526 - DEBUG - Creando punto 4 en (6351509.835, 286412.654, 104.725) con descripción: V6
+2025-04-07 23:56:21,528 - DEBUG - Punto APoint creado: APoint(6351509.83, 286412.65, 104.72)
+2025-04-07 23:56:21,539 - ERROR - Error al crear punto 4: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,541 - DEBUG - Creando punto 5 en (6351493.247, 286404.878, 105.152) con descripción: V7
+2025-04-07 23:56:21,542 - DEBUG - Punto APoint creado: APoint(6351493.25, 286404.88, 105.15)
+2025-04-07 23:56:21,546 - ERROR - Error al crear punto 5: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,550 - DEBUG - Creando punto 6 en (6351456.567, 286378.36, 106.576) con descripción: V8
+2025-04-07 23:56:21,551 - DEBUG - Punto APoint creado: APoint(6351456.57, 286378.36, 106.58)
+2025-04-07 23:56:21,553 - ERROR - Error al crear punto 6: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,553 - DEBUG - Creando punto 7 en (6351431.051, 286368.849, 108.444) con descripción: V9
+2025-04-07 23:56:21,554 - DEBUG - Punto APoint creado: APoint(6351431.05, 286368.85, 108.44)
+2025-04-07 23:56:21,558 - ERROR - Error al crear punto 7: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,567 - DEBUG - Creando punto 8 en (6351422.134, 286361.205, 108.217) con descripción: V10
+2025-04-07 23:56:21,568 - DEBUG - Punto APoint creado: APoint(6351422.13, 286361.21, 108.22)
+2025-04-07 23:56:21,571 - ERROR - Error al crear punto 8: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,573 - DEBUG - Creando punto 9 en (6351317.94, 286280.707, 117.293) con descripción: V16
+2025-04-07 23:56:21,575 - DEBUG - Punto APoint creado: APoint(6351317.94, 286280.71, 117.29)
+2025-04-07 23:56:21,582 - ERROR - Error al crear punto 9: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,583 - DEBUG - Creando punto 10 en (6351248.778, 286276.941, 124.938) con descripción: V18
+2025-04-07 23:56:21,583 - DEBUG - Punto APoint creado: APoint(6351248.78, 286276.94, 124.94)
+2025-04-07 23:56:21,585 - ERROR - Error al crear punto 10: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,586 - DEBUG - Creando punto 11 en (6351410.938, 286338.639, 110.511) con descripción: V11
+2025-04-07 23:56:21,586 - DEBUG - Punto APoint creado: APoint(6351410.94, 286338.64, 110.51)
+2025-04-07 23:56:21,591 - ERROR - Error al crear punto 11: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,599 - DEBUG - Creando punto 12 en (6351403.525, 286323.656, 111.871) con descripción: V12
+2025-04-07 23:56:21,600 - DEBUG - Punto APoint creado: APoint(6351403.53, 286323.66, 111.87)
+2025-04-07 23:56:21,602 - ERROR - Error al crear punto 12: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,602 - DEBUG - Creando punto 13 en (6351371.81, 286312.211, 113.862) con descripción: V14
+2025-04-07 23:56:21,605 - DEBUG - Punto APoint creado: APoint(6351371.81, 286312.21, 113.86)
+2025-04-07 23:56:21,609 - ERROR - Error al crear punto 13: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,610 - DEBUG - Creando punto 14 en (6351286.266, 286270.195, 119.541) con descripción: V17
+2025-04-07 23:56:21,616 - DEBUG - Punto APoint creado: APoint(6351286.27, 286270.20, 119.54)
+2025-04-07 23:56:21,622 - ERROR - Error al crear punto 14: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,623 - DEBUG - Creando punto 15 en (6351400.361, 286317.492, 112.345) con descripción: V13
+2025-04-07 23:56:21,625 - DEBUG - Punto APoint creado: APoint(6351400.36, 286317.49, 112.34)
+2025-04-07 23:56:21,630 - ERROR - Error al crear punto 15: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,631 - DEBUG - Creando punto 16 en (6351778.627, 286471.3, 95.282) con descripción: V0
+2025-04-07 23:56:21,632 - DEBUG - Punto APoint creado: APoint(6351778.63, 286471.30, 95.28)
+2025-04-07 23:56:21,634 - ERROR - Error al crear punto 16: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,635 - DEBUG - Creando punto 17 en (6351727.87, 286469.897, 96.906) con descripción: VA1
+2025-04-07 23:56:21,638 - DEBUG - Punto APoint creado: APoint(6351727.87, 286469.90, 96.91)
+2025-04-07 23:56:21,647 - ERROR - Error al crear punto 17: [WinError -2147221005] Cadena clase no válida
+2025-04-07 23:56:21,648 - INFO - Proceso de creación de puntos completado (solo AutoCAD). La creación de tuberías se omitió.
+2025-04-07 23:56:21,650 - INFO - Cerrando procesos...
+2025-04-07 23:56:21,652 - INFO - 127.0.0.1 - - [07/Apr/2025 23:56:21] "POST /cargar_datos HTTP/1.1" 200 -
+2025-04-08 00:16:00,836 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:16:00,839 - DEBUG - CoUninitialize() done.
+2025-04-08 00:16:05,998 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:16:05,998 - DEBUG - CoUninitialize() done.
+2025-04-08 00:16:29,812 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:16:29,813 - DEBUG - CoUninitialize() done.
+2025-04-08 00:18:01,540 - INFO - Registrando los blueprints...
+2025-04-08 00:18:01,552 - INFO - Blueprints registrados correctamente.
+2025-04-08 00:18:01,559 - INFO - Iniciando la aplicación Flask...
+2025-04-08 00:18:01,811 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-08 00:18:01,816 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 00:18:12,400 - INFO - Cerrando procesos...
+2025-04-08 00:18:12,402 - INFO - Proceso de Civil 3D terminado.
+2025-04-08 00:18:12,409 - INFO - Finalización del proceso de Civil 3D.
+2025-04-08 00:18:12,410 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:18:12,411 - DEBUG - CoUninitialize() done.
+2025-04-08 00:18:12,553 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:18:12,554 - DEBUG - CoUninitialize() done.
+2025-04-08 00:18:12,671 - INFO - 127.0.0.1 - - [08/Apr/2025 00:18:12] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-08 00:18:13,015 - INFO - Cerrando procesos...
+2025-04-08 00:18:13,022 - INFO - 127.0.0.1 - - [08/Apr/2025 00:18:13] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-08 00:18:13,102 - INFO - Cerrando procesos...
+2025-04-08 00:18:13,110 - INFO - 127.0.0.1 - - [08/Apr/2025 00:18:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-08 00:18:13,487 - INFO - Listando los scripts en el directorio...
+2025-04-08 00:18:13,499 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-08 00:18:13,504 - INFO - Cerrando procesos...
+2025-04-08 00:18:13,507 - INFO - 127.0.0.1 - - [08/Apr/2025 00:18:13] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-08 00:19:43,662 - INFO - Cerrando procesos...
+2025-04-08 00:19:43,663 - INFO - 127.0.0.1 - - [08/Apr/2025 00:19:43] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-08 00:19:43,918 - INFO - Cerrando procesos...
+2025-04-08 00:19:43,923 - INFO - 127.0.0.1 - - [08/Apr/2025 00:19:43] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-08 00:19:44,065 - INFO - Cerrando procesos...
+2025-04-08 00:19:44,066 - INFO - 127.0.0.1 - - [08/Apr/2025 00:19:44] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-08 00:19:44,104 - INFO - Listando los scripts en el directorio...
+2025-04-08 00:19:44,125 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-08 00:19:44,127 - INFO - Cerrando procesos...
+2025-04-08 00:19:44,128 - INFO - 127.0.0.1 - - [08/Apr/2025 00:19:44] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-08 00:20:12,388 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-08 00:20:12,391 - INFO - Recursos COM liberados.
+2025-04-08 00:20:12,392 - INFO - Cerrando procesos...
+2025-04-08 00:20:12,414 - INFO - 127.0.0.1 - - [08/Apr/2025 00:20:12] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-08 00:25:52,445 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:25:52,446 - DEBUG - CoUninitialize() done.
+2025-04-08 00:25:57,515 - INFO - Registrando los blueprints...
+2025-04-08 00:25:57,536 - INFO - Blueprints registrados correctamente.
+2025-04-08 00:25:57,661 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-08 00:25:57,662 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 00:25:57,677 - INFO -  * Restarting with stat
+2025-04-08 00:25:59,152 - INFO - Registrando los blueprints...
+2025-04-08 00:25:59,163 - INFO - Blueprints registrados correctamente.
+2025-04-08 00:25:59,192 - WARNING -  * Debugger is active!
+2025-04-08 00:25:59,229 - INFO -  * Debugger PIN: 508-480-824
+2025-04-08 00:26:59,770 - INFO - 127.0.0.1 - - [08/Apr/2025 00:26:59] "[33mGET /?coordenadas=&tuberias= HTTP/1.1[0m" 404 -
+2025-04-08 00:27:02,083 - INFO - 127.0.0.1 - - [08/Apr/2025 00:27:02] "[33mGET /?coordenadas=&tuberias= HTTP/1.1[0m" 404 -
+2025-04-08 00:27:25,824 - INFO -  * Detected change in 'C:\\Users\\work\\Desktop\\civil_3D _win_v\\civil_3D _win_v\\civil_3D\\civil_3D\\run.py', reloading
+2025-04-08 00:27:29,334 - INFO - 127.0.0.1 - - [08/Apr/2025 00:27:29] "[33mGET /?coordenadas=&tuberias= HTTP/1.1[0m" 404 -
+2025-04-08 00:32:57,317 - INFO - Finalización del proceso de Civil 3D.
+2025-04-08 00:32:57,316 - INFO - Finalización del proceso de Civil 3D.
+2025-04-08 00:32:58,067 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:32:58,072 - DEBUG - CoUninitialize() done.
+2025-04-08 00:32:58,104 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:32:58,105 - DEBUG - CoUninitialize() done.
+2025-04-08 00:32:58,243 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:32:58,246 - DEBUG - CoUninitialize() done.
+2025-04-08 00:32:58,323 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:32:58,325 - DEBUG - CoUninitialize() done.
+2025-04-08 00:32:58,529 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:32:58,530 - DEBUG - CoUninitialize() done.
+2025-04-08 00:32:58,664 - INFO - Iniciando la aplicación Flask...
+2025-04-08 00:32:58,682 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-08 00:32:58,683 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 00:33:00,696 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:33:00,697 - DEBUG - CoUninitialize() done.
+2025-04-08 00:33:06,486 - INFO - Registrando los blueprints...
+2025-04-08 00:33:06,497 - INFO - Blueprints registrados correctamente.
+2025-04-08 00:33:06,510 - INFO - Iniciando la aplicación Flask...
+2025-04-08 00:33:06,647 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-08 00:33:06,648 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 00:33:10,613 - INFO - Cerrando procesos...
+2025-04-08 00:33:10,618 - INFO - Proceso de Civil 3D terminado.
+2025-04-08 00:33:10,619 - INFO - Finalización del proceso de Civil 3D.
+2025-04-08 00:33:10,620 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:33:10,622 - DEBUG - CoUninitialize() done.
+2025-04-08 00:33:10,791 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:33:10,792 - DEBUG - CoUninitialize() done.
+2025-04-08 00:33:10,940 - INFO - 127.0.0.1 - - [08/Apr/2025 00:33:10] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-08 00:33:11,280 - INFO - Cerrando procesos...
+2025-04-08 00:33:11,283 - INFO - 127.0.0.1 - - [08/Apr/2025 00:33:11] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-08 00:33:11,408 - INFO - Cerrando procesos...
+2025-04-08 00:33:11,409 - INFO - 127.0.0.1 - - [08/Apr/2025 00:33:11] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-08 00:33:11,779 - INFO - Listando los scripts en el directorio...
+2025-04-08 00:33:11,780 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-08 00:33:11,782 - INFO - Cerrando procesos...
+2025-04-08 00:33:11,783 - INFO - 127.0.0.1 - - [08/Apr/2025 00:33:11] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-08 00:33:28,503 - ERROR - El argumento 'archivo' no tiene atributo 'filename'.
+2025-04-08 00:33:28,505 - INFO - Recursos COM liberados.
+2025-04-08 00:33:28,509 - INFO - Cerrando procesos...
+2025-04-08 00:33:28,533 - INFO - 127.0.0.1 - - [08/Apr/2025 00:33:28] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-08 00:45:19,906 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:45:19,908 - DEBUG - CoUninitialize() done.
+2025-04-08 00:45:23,835 - INFO - Registrando los blueprints...
+2025-04-08 00:45:23,849 - INFO - Blueprints registrados correctamente.
+2025-04-08 00:45:23,860 - INFO - Iniciando la aplicación Flask...
+2025-04-08 00:45:23,979 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-08 00:45:23,980 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 00:45:31,899 - INFO - Cerrando procesos...
+2025-04-08 00:45:31,900 - INFO - Proceso de Civil 3D terminado.
+2025-04-08 00:45:31,901 - INFO - Finalización del proceso de Civil 3D.
+2025-04-08 00:45:31,902 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:45:31,902 - DEBUG - CoUninitialize() done.
+2025-04-08 00:45:32,023 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:45:32,024 - DEBUG - CoUninitialize() done.
+2025-04-08 00:45:32,148 - INFO - 127.0.0.1 - - [08/Apr/2025 00:45:32] "GET /?coordenadas=&tuberias= HTTP/1.1" 200 -
+2025-04-08 00:45:32,482 - INFO - Cerrando procesos...
+2025-04-08 00:45:32,485 - INFO - 127.0.0.1 - - [08/Apr/2025 00:45:32] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-08 00:45:32,555 - INFO - Cerrando procesos...
+2025-04-08 00:45:32,558 - INFO - 127.0.0.1 - - [08/Apr/2025 00:45:32] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+2025-04-08 00:45:32,908 - INFO - Listando los scripts en el directorio...
+2025-04-08 00:45:32,911 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-08 00:45:32,914 - INFO - Cerrando procesos...
+2025-04-08 00:45:32,915 - INFO - 127.0.0.1 - - [08/Apr/2025 00:45:32] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-08 00:46:42,143 - WARNING - Error al conectar con Civil 3D: Autocad.__init__() got an unexpected keyword argument 'add_on'. Intentando conectar con AutoCAD...
+2025-04-08 00:46:42,149 - INFO - Conexión con AutoCAD establecida.
+2025-04-08 00:46:42,316 - ERROR - Error inesperado al procesar el archivo: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:46:42,317 - INFO - Recursos COM liberados.
+2025-04-08 00:46:42,325 - INFO - Cerrando procesos...
+2025-04-08 00:46:42,371 - INFO - 127.0.0.1 - - [08/Apr/2025 00:46:42] "[35m[1mPOST /abrir_dwg HTTP/1.1[0m" 500 -
+2025-04-08 00:53:41,218 - INFO - Cerrando procesos...
+2025-04-08 00:54:51,439 - INFO - Cerrando procesos...
+2025-04-08 00:54:55,120 - INFO - 127.0.0.1 - - [08/Apr/2025 00:54:55] "GET / HTTP/1.1" 200 -
+2025-04-08 00:54:55,132 - INFO - 127.0.0.1 - - [08/Apr/2025 00:54:55] "GET / HTTP/1.1" 200 -
+2025-04-08 00:54:55,537 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:54:55,538 - DEBUG - CoUninitialize() done.
+2025-04-08 00:54:58,571 - INFO - Registrando los blueprints...
+2025-04-08 00:54:58,584 - INFO - Blueprints registrados correctamente.
+2025-04-08 00:54:58,591 - INFO - Iniciando la aplicación Flask...
+2025-04-08 00:54:58,707 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-08 00:54:58,710 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-08 00:55:02,379 - INFO - Cerrando procesos...
+2025-04-08 00:55:02,384 - INFO - Proceso de Civil 3D terminado.
+2025-04-08 00:55:02,384 - INFO - Finalización del proceso de Civil 3D.
+2025-04-08 00:55:02,386 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:55:02,386 - DEBUG - CoUninitialize() done.
+2025-04-08 00:55:02,510 - DEBUG - Calling CoUninitialize()
+2025-04-08 00:55:02,511 - DEBUG - CoUninitialize() done.
+2025-04-08 00:55:02,632 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:02] "GET / HTTP/1.1" 200 -
+2025-04-08 00:55:02,800 - INFO - Cerrando procesos...
+2025-04-08 00:55:02,812 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:02] "GET /static/index.css HTTP/1.1" 200 -
+2025-04-08 00:55:03,006 - INFO - Cerrando procesos...
+2025-04-08 00:55:03,010 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:03] "GET /static/script.js HTTP/1.1" 200 -
+2025-04-08 00:55:03,359 - INFO - Listando los scripts en el directorio...
+2025-04-08 00:55:03,361 - INFO - Scripts encontrados: ['cargar_dwg.py', 'civil3d_process.py', 'crear_puntos.py', 'crear_puntos_curva.py', 'etiquetado.py', 'obtener_objetos.py', 'obtener_perfiles.py', 'perfiles.py', 'queues.py', 'seleccionar_objetos.py']
+2025-04-08 00:55:03,364 - INFO - Cerrando procesos...
+2025-04-08 00:55:03,368 - INFO - Cerrando procesos...
+2025-04-08 00:55:03,369 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:03] "GET /listar_scripts HTTP/1.1" 200 -
+2025-04-08 00:55:03,370 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-08 00:55:07,250 - INFO - Cerrando procesos...
+2025-04-08 00:55:07,259 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:07] "[36mGET /static/index.css HTTP/1.1[0m" 304 -
+2025-04-08 00:55:18,916 - INFO - Inicio de la ruta /cargar_datos
+2025-04-08 00:55:20,608 - ERROR - Error al verificar o agregar la ruta a la variable Path: Command '['powershell', '-Command', '$env:Path -match "C:\\Program Files\\Autodesk\\Civil 3D 2025 Object Enabler"']' returned non-zero exit status 1.
+2025-04-08 00:55:20,609 - WARNING - Continuando con la conexión a AutoCAD a pesar del error en la configuración del Path de Civil 3D.
+2025-04-08 00:55:20,614 - INFO - Conexión con AutoCAD establecida.
+2025-04-08 00:55:20,622 - WARNING - Error COM al conectar con Civil 3D. Intentando conexión básica con AutoCAD.
+2025-04-08 00:55:20,625 - DEBUG - Creando punto 1 en (6351649.062, 286463.335, 99.18) con descripción: V1
+2025-04-08 00:55:20,626 - DEBUG - Punto APoint creado: APoint(6351649.06, 286463.34, 99.18)
+2025-04-08 00:55:20,627 - ERROR - Error al crear punto 1: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,628 - DEBUG - Creando punto 2 en (6351584.622, 286441.112, 101.015) con descripción: V2
+2025-04-08 00:55:20,629 - DEBUG - Punto APoint creado: APoint(6351584.62, 286441.11, 101.02)
+2025-04-08 00:55:20,630 - ERROR - Error al crear punto 2: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,631 - DEBUG - Creando punto 3 en (6351524.163, 286419.634, 104.162) con descripción: V5
+2025-04-08 00:55:20,632 - DEBUG - Punto APoint creado: APoint(6351524.16, 286419.63, 104.16)
+2025-04-08 00:55:20,633 - ERROR - Error al crear punto 3: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,634 - DEBUG - Creando punto 4 en (6351509.835, 286412.654, 104.725) con descripción: V6
+2025-04-08 00:55:20,634 - DEBUG - Punto APoint creado: APoint(6351509.83, 286412.65, 104.72)
+2025-04-08 00:55:20,636 - ERROR - Error al crear punto 4: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,637 - DEBUG - Creando punto 5 en (6351493.247, 286404.878, 105.152) con descripción: V7
+2025-04-08 00:55:20,638 - DEBUG - Punto APoint creado: APoint(6351493.25, 286404.88, 105.15)
+2025-04-08 00:55:20,642 - ERROR - Error al crear punto 5: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,643 - DEBUG - Creando punto 6 en (6351456.567, 286378.36, 106.576) con descripción: V8
+2025-04-08 00:55:20,644 - DEBUG - Punto APoint creado: APoint(6351456.57, 286378.36, 106.58)
+2025-04-08 00:55:20,645 - ERROR - Error al crear punto 6: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,646 - DEBUG - Creando punto 7 en (6351431.051, 286368.849, 108.444) con descripción: V9
+2025-04-08 00:55:20,646 - DEBUG - Punto APoint creado: APoint(6351431.05, 286368.85, 108.44)
+2025-04-08 00:55:20,649 - ERROR - Error al crear punto 7: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,651 - DEBUG - Creando punto 8 en (6351422.134, 286361.205, 108.217) con descripción: V10
+2025-04-08 00:55:20,653 - DEBUG - Punto APoint creado: APoint(6351422.13, 286361.21, 108.22)
+2025-04-08 00:55:20,659 - ERROR - Error al crear punto 8: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,661 - DEBUG - Creando punto 9 en (6351317.94, 286280.707, 117.293) con descripción: V16
+2025-04-08 00:55:20,662 - DEBUG - Punto APoint creado: APoint(6351317.94, 286280.71, 117.29)
+2025-04-08 00:55:20,664 - ERROR - Error al crear punto 9: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,665 - DEBUG - Creando punto 10 en (6351248.778, 286276.941, 124.938) con descripción: V18
+2025-04-08 00:55:20,665 - DEBUG - Punto APoint creado: APoint(6351248.78, 286276.94, 124.94)
+2025-04-08 00:55:20,667 - ERROR - Error al crear punto 10: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,668 - DEBUG - Creando punto 11 en (6351410.938, 286338.639, 110.511) con descripción: V11
+2025-04-08 00:55:20,670 - DEBUG - Punto APoint creado: APoint(6351410.94, 286338.64, 110.51)
+2025-04-08 00:55:20,675 - ERROR - Error al crear punto 11: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,675 - DEBUG - Creando punto 12 en (6351403.525, 286323.656, 111.871) con descripción: V12
+2025-04-08 00:55:20,676 - DEBUG - Punto APoint creado: APoint(6351403.53, 286323.66, 111.87)
+2025-04-08 00:55:20,679 - ERROR - Error al crear punto 12: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,679 - DEBUG - Creando punto 13 en (6351371.81, 286312.211, 113.862) con descripción: V14
+2025-04-08 00:55:20,680 - DEBUG - Punto APoint creado: APoint(6351371.81, 286312.21, 113.86)
+2025-04-08 00:55:20,682 - ERROR - Error al crear punto 13: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,690 - DEBUG - Creando punto 14 en (6351286.266, 286270.195, 119.541) con descripción: V17
+2025-04-08 00:55:20,691 - DEBUG - Punto APoint creado: APoint(6351286.27, 286270.20, 119.54)
+2025-04-08 00:55:20,694 - ERROR - Error al crear punto 14: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,695 - DEBUG - Creando punto 15 en (6351400.361, 286317.492, 112.345) con descripción: V13
+2025-04-08 00:55:20,696 - DEBUG - Punto APoint creado: APoint(6351400.36, 286317.49, 112.34)
+2025-04-08 00:55:20,698 - ERROR - Error al crear punto 15: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,699 - DEBUG - Creando punto 16 en (6351778.627, 286471.3, 95.282) con descripción: V0
+2025-04-08 00:55:20,701 - DEBUG - Punto APoint creado: APoint(6351778.63, 286471.30, 95.28)
+2025-04-08 00:55:20,707 - ERROR - Error al crear punto 16: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,708 - DEBUG - Creando punto 17 en (6351727.87, 286469.897, 96.906) con descripción: VA1
+2025-04-08 00:55:20,709 - DEBUG - Punto APoint creado: APoint(6351727.87, 286469.90, 96.91)
+2025-04-08 00:55:20,711 - ERROR - Error al crear punto 17: [WinError -2147221005] Cadena clase no válida
+2025-04-08 00:55:20,745 - INFO - Proceso de creación de puntos completado (solo AutoCAD). La creación de tuberías se omitió.
+2025-04-08 00:55:20,748 - INFO - Cerrando procesos...
+2025-04-08 00:55:20,749 - INFO - 127.0.0.1 - - [08/Apr/2025 00:55:20] "POST /cargar_datos HTTP/1.1" 200 -
+2025-04-08 00:59:53,288 - INFO - Obteniendo objetos de AutoCAD...
+2025-04-08 00:59:55,051 - INFO - Obteniendo perfiles de AutoCAD...
+2025-04-08 00:59:55,489 - INFO - Cerrando procesos...
+2025-04-08 01:00:12,796 - INFO - Conexión con AutoCAD establecida.
+2025-04-08 01:00:12,797 - INFO - Conexión con AutoCAD establecida.
+2025-04-08 01:00:12,798 - INFO - 127.0.0.1 - - [08/Apr/2025 01:00:12] "GET /?coordenadas=coordenadas.csv&tuberias=info_tuberias.csv HTTP/1.1" 200 -
+2025-04-08 01:00:12,799 - WARNING - No hay objetos en el espacio modelo.
+2025-04-08 01:00:12,799 - INFO - No hay objetos en el espacio modelo.
+2025-04-08 01:00:12,800 - INFO - Recursos COM liberados.
+2025-04-08 01:00:12,801 - WARNING - No se encontraron objetos en AutoCAD.
+2025-04-08 01:00:12,802 - INFO - Cerrando procesos...
+2025-04-08 01:00:12,802 - INFO - Recursos COM liberados.
+2025-04-08 01:00:12,805 - INFO - Cerrando procesos...
+2025-04-08 01:00:12,806 - INFO - 127.0.0.1 - - [08/Apr/2025 01:00:12] "GET /obtener_perfiles HTTP/1.1" 200 -
+2025-04-08 01:00:12,813 - INFO - 127.0.0.1 - - [08/Apr/2025 01:00:12] "GET /obtener_objetos HTTP/1.1" 200 -
+2025-04-08 01:00:13,251 - DEBUG - Calling CoUninitialize()
+2025-04-08 01:00:13,252 - DEBUG - CoUninitialize() done.
