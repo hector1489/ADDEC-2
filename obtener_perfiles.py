@@ -1,110 +1,75 @@
 import logging
-from pyautocad import Autocad
 import pythoncom
 from autocad_civil import conectar_con_autocad_civil, desconectar_autocad_civil
+from flask import jsonify
 
-logging.basicConfig(level=logging.INFO)
+# Configuración del logging
+logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 def obtener_perfiles_autocad():
-    """Obtiene información detallada de los perfiles (polilíneas) de Civil 3D."""
+    """Obtiene perfiles de Civil 3D si está disponible."""
     acad = None
     civil3d = None
     try:
         pythoncom.CoInitialize()
-        # Conectar con AutoCAD y Civil 3D usando la función centralizada
+        logger.debug("🔧 Iniciando conexión con AutoCAD/Civil 3D...")
         acad, civil3d = conectar_con_autocad_civil()
 
         if acad is None:
+            logger.error("❌ No se pudo conectar con AutoCAD.")
             return {"error": "No se pudo conectar con AutoCAD."}
 
-        perfiles_info = []
+        if civil3d is None:
+            logger.warning("⚠️ Conexión establecida solo con AutoCAD. No se pueden obtener perfiles de Civil 3D.")
+            return {"warning": "Civil 3D no está disponible o no se pudo conectar."}
 
-        try:
-            if hasattr(acad, "model_space") and acad.model_space:
-                for obj in acad.model_space:
-                    if obj.ObjectName == "AcDbPolyline":
-                        try:
-                            perfil_info = {
-                                "Handle": obj.Handle,
-                                "ObjectName": obj.ObjectName,
-                                "Número de vértices": len(obj.vertices),
-                                "Longitud": obj.Length,
-                                "Vértices": list(obj.vertices),
-                                "XData": obtener_xdata(obj),
-                                "Layer": obj.Layer,
-                                "Color": obj.TrueColor,
-                                "Thickness": obj.Thickness,
-                                "Alineación": obtener_alineacion(obj),
-                                "Perfil": obtener_perfil(obj),
-                                "Superficie": obtener_superficie(obj),
-                            }
-                            perfiles_info.append(perfil_info)
-                        except Exception as obj_error:
-                            logger.error(f"Error al procesar perfil (polyline) {obj.Handle}: {obj_error}")
-                    # Aquí podrías agregar lógica adicional si civil3d está conectado
-                    elif civil3d:
-                        if obj.ObjectName.startswith("AeccDb"):
-                            logger.info(f"Objeto de Civil 3D encontrado: {obj.ObjectName} - {obj.Handle}")
-                            # Aquí podrías intentar acceder a propiedades específicas de objetos de Civil 3D
-                            try:
-                                if obj.ObjectName == "AeccDbAlignment":
-                                    perfil_info_civil = {
-                                        "Handle": obj.Handle,
-                                        "ObjectName": obj.ObjectName,
-                                        "Name": obj.Name,
-                                        "Length": obj.Length,
-                                        # Añade más propiedades relevantes de la alineación
-                                    }
-                                    perfiles_info.append(perfil_info_civil)
-                                elif obj.ObjectName == "AeccDbProfile":
-                                    perfil_info_civil = {
-                                        "Handle": obj.Handle,
-                                        "ObjectName": obj.ObjectName,
-                                        "Name": obj.Name,
-                                        "Length": obj.Length,
-                                        # Añade más propiedades relevantes del perfil
-                                    }
-                                    perfiles_info.append(perfil_info_civil)
-                                elif obj.ObjectName == "AeccDbSurface":
-                                    perfil_info_civil = {
-                                        "Handle": obj.Handle,
-                                        "ObjectName": obj.ObjectName,
-                                        "Name": obj.Name,
-                                        # Añade más propiedades relevantes de la superficie
-                                    }
-                                    perfiles_info.append(perfil_info_civil)
-                                else:
-                                    logger.info(f"Objeto AeccDb no procesado: {obj.ObjectName}")
-                            except Exception as civil_obj_error:
-                                logger.error(f"Error al procesar objeto Civil 3D {obj.Handle} ({obj.ObjectName}): {civil_obj_error}")
-
-            else:
-                logger.warning("No hay objetos en el espacio modelo.")
-                return {"warning": "No hay objetos en el espacio modelo."}
-
-        except Exception as e:
-            logger.error(f"Error al acceder al espacio modelo: {e}")
-            return {"error": f"Error al acceder al espacio modelo: {e}"}
+        logger.debug("✅ Conexión con Civil 3D exitosa. Obteniendo perfiles...")
+        perfiles_info = obtener_perfiles_desde_civil3d(civil3d)
 
         if not perfiles_info:
-            logger.warning("No se encontraron perfiles (polilíneas o objetos de Civil 3D relacionados) en AutoCAD.")
-            return {"warning": "No se encontraron perfiles (polilíneas o objetos de Civil 3D relacionados) en AutoCAD."}
+            logger.info("📭 No se encontraron perfiles en el dibujo actual.")
+            return {"warning": "No se encontraron perfiles en el dibujo."}
 
+        logger.info(f"✅ Se encontraron {len(perfiles_info)} perfiles.")
         return perfiles_info
 
     except Exception as e:
-        logger.error(f"Error inesperado: {e}")
+        logger.exception("❌ Ocurrió un error inesperado.")
         return {"error": f"Error inesperado: {e}"}
 
     finally:
-        # Desconectar usando la función centralizada
-        desconectar_autocad_civil(acad, civil3d)
         try:
+            logger.debug("🔧 Liberando recursos COM y desconectando AutoCAD/Civil 3D...")
+            desconectar_autocad_civil(acad, civil3d)
             pythoncom.CoUninitialize()
-            logger.info("Recursos COM liberados.")
+            logger.info("🔁 COM liberado correctamente.")
         except Exception as e:
-            logger.error(f"Error al liberar recursos COM: {e}")
+            logger.error(f"⚠️ Error al liberar recursos COM: {e}")
+
+
+def obtener_perfiles_desde_civil3d(civil3d_app):
+    """Obtiene perfiles de alineaciones desde la API COM de Civil 3D."""
+    perfiles = []
+    try:
+        civil_doc = civil3d_app.ActiveDocument
+        alignments = civil_doc.AlignmentsSiteless
+
+        for alignment in alignments:
+            for perfil in alignment.Profiles:
+                perfiles.append({
+                    "Alineación": alignment.Name,
+                    "Perfil": perfil.Name,
+                    "Tipo": str(perfil.Type),
+                    "Estilo": perfil.StyleName,
+                })
+
+    except Exception as e:
+        logger.exception("Error al obtener perfiles desde Civil 3D.")
+        return []
+
+    return perfiles
+
 
 def obtener_xdata(obj):
     """Obtiene todas las XData del objeto."""
@@ -113,8 +78,10 @@ def obtener_xdata(obj):
             return obj.XData
         else:
             return None
-    except:
+    except AttributeError as e:
+        logger.error(f"Error al acceder a XData: {e}")
         return None
+
 
 def obtener_alineacion(obj):
     """Intenta obtener información de alineación asociada al objeto."""
