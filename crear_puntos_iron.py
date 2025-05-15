@@ -48,14 +48,14 @@ def crear_puntos_y_tuberias_desde_csv(ruta_coordenadas_csv, ruta_tuberias_csv, n
                         btr.AppendEntity(punto_db)
                         trans.AddNewlyCreatedDBObject(punto_db, True)
 
-                        puntos_creados[id_punto] = punto_3d
+                        puntos_creados[id_punto] = punto_3d  # Almacenar Point3d
                         editor.WriteMessage(f"\nPunto {id_punto} creado en ({x}, {y}, {z})")
                     except ValueError:
                         editor.WriteMessage(f"\nAdvertencia: Datos de coordenadas no válidos para el punto {fila_coord.get('ID', 'desconocido')}")
                     except KeyError as e:
                         editor.WriteMessage(f"\nError: Falta la columna '{e}' en el archivo de coordenadas: {e}")
 
-            # 2. Leer y crear tuberías desde el archivo de tuberías
+            # 2. Leer y crear tuberías (líneas 3D) desde el archivo de tuberías
             with open(ruta_tuberias_csv, 'r') as archivo_tuberias_csv:
                 lector_tuberias_csv = csv.DictReader(archivo_tuberias_csv)
                 for fila_tuberia in lector_tuberias_csv:
@@ -88,13 +88,13 @@ def crear_puntos_y_tuberias_desde_csv(ruta_coordenadas_csv, ruta_tuberias_csv, n
                         trans.AddNewlyCreatedDBObject(pline, True)
 
                         # Adjuntar datos extendidos (XData) a la línea
-                        reg_name = "TUBERIA_DATA"
+                        reg_name = "TUBERIA_DATA"  # Nombre de registro XData
                         if not db.TryGetRegAppId(reg_name):
                             db.RegisterAppName(reg_name)
                         reg_id = db.TryGetRegAppId(reg_name)
 
                         xdata = ResultBuffer([
-                            TypedValue(1001, reg_name),
+                            TypedValue(1001, reg_name),  # Aplicación de registro
                             TypedValue(1000, f"ID_TUBERIA:{id_tuberia}"),
                             TypedValue(40, diametro),
                             TypedValue(1000, f"MATERIAL:{material}"),
@@ -122,8 +122,9 @@ def crear_puntos_y_tuberias_desde_csv(ruta_coordenadas_csv, ruta_tuberias_csv, n
             trans.Dispose()
 
 # Cambia estos valores según tus archivos
-ruta_archivo_coordenadas_csv = r"C:\civil_3D_win_v\coordenadas.csv"
-ruta_archivo_tuberias_csv = r"C:\civil_3D_win_v\info_tuberias.csv"
+ruta_archivo_coordenadas_csv = r"C:User\carlo\OneDrive\Escritorio\civil_3D_win_v\civil_3D\civil_3D\coordenadas.csv"
+ruta_archivo_tuberias_csv = r"C:User\carlo\OneDrive\Escritorio\civil_3D_win_v\civil_3D\civil_3D\info_tuberias.csv"
 nombre_de_la_alineacion = "ALINEA1"
+
 
 crear_puntos_y_tuberias_desde_csv(ruta_archivo_coordenadas_csv, ruta_archivo_tuberias_csv, nombre_de_la_alineacion)
