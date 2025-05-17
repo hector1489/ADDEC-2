@@ -1,0 +1,52 @@
+import clr
+import sys
+import pythoncom
+from Autodesk.AutoCAD.ApplicationServices import Application
+from Autodesk.Civil.ApplicationServices import CivilApplication
+
+clr.AddReference('AcMgd')
+clr.AddReference('AcDbMgd')
+clr.AddReference('AeccDbMgd')
+
+def obtener_perfiles_autocad():
+    """Obtiene perfiles de Civil 3D"""
+    acad = None
+    civil3d = None
+    perfiles_info = []
+
+    try:
+        pythoncom.CoInitialize()
+
+        acad = Application.DocumentManager.MdiActiveDocument
+        if acad is None:
+            return "No se pudo conectar a AutoCAD."
+
+        civil3d = CivilApplication.GetApplication()
+        if civil3d is None:
+            return "No se pudo obtener Civil 3D."
+
+        civil_doc = civil3d.ActiveDocument
+        alignments = civil_doc.AlignmentsSiteless
+
+        for alignment in alignments:
+            for perfil in alignment.Profiles:
+                perfiles_info.append({
+                    "Alineación": alignment.Name,
+                    "Perfil": perfil.Name,
+                    "Tipo": str(perfil.Type),
+                    "Estilo": perfil.StyleName,
+                })
+
+        if not perfiles_info:
+            return "No se encontraron perfiles."
+
+        return perfiles_info
+
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+    finally:
+        pythoncom.CoUninitialize()
+
+# Esta función sería ejecutada dentro del script de Dynamo.
+OUT = obtener_perfiles_autocad()

@@ -1,0 +1,67 @@
+import clr
+import sys
+
+autocad_path = r"C:\Program Files\Autodesk\AutoCAD 2025"
+civil3d_path = r"C:\Program Files\Autodesk\AutoCAD 2025\C3D"
+
+if autocad_path not in sys.path:
+    sys.path.append(autocad_path)
+if civil3d_path not in sys.path:
+    sys.path.append(civil3d_path)
+
+clr.AddReference('AcMgd')
+clr.AddReference('AcDbMgd')
+clr.AddReference('AeccDbMgd')
+
+from Autodesk.AutoCAD.ApplicationServices import Application
+from Autodesk.AutoCAD.DatabaseServices import TransactionManager, BlockTableRecord, Point3d, Line
+
+data_tuberias = IN[0]  #la información de las tuberías
+puntos_coords = IN[1] #el PK y el valor es un Point3d
+
+doc = Application.DocumentManager.MdiActiveDocument
+if doc:
+    db = doc.Database
+    editor = doc.Editor
+
+    with doc.TransactionManager as tm:
+        bt = tm.GetObject(db.BlockTableId, OpenMode.ForRead)
+        btr = tm.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite)
+
+        lineas_creadas = []
+
+        for tuberia in data_tuberias:
+            pk_inicio = int(tuberia['PK_INICIO'])
+            pk_fin = int(tuberia['PK_FIN'])
+
+            if pk_inicio in puntos_coords and pk_fin in puntos_coords:
+                start_point = puntos_coords[pk_inicio]
+                end_point = puntos_coords[pk_fin]
+
+                line = Line(start_point, end_point)
+                btr.AppendEntity(line)
+                tm.AddNewlyCreatedDBObject(line, True)
+                lineas_creadas.append(line.ObjectId.Handle.Value)
+
+                # Opcional: Agregar información como Textos (similar al script Flask)
+                mid_point = Point3d(
+                    (start_point.X + end_point.X) / 2,
+                    (start_point.Y + end_point.Y) / 2,
+                    (start_point.Z + end_point.Z) / 2
+                )
+                texto_info = f"ID: {tuberia['ID_TUBERIA']}\nD: {tuberia['DIAMETRO']}"
+                texto = Autodesk.AutoCAD.DatabaseServices.DBText()
+                texto.SetDatabaseDefaults()
+                texto.Position = mid_point
+                texto.TextString = texto_info
+                btr.AppendEntity(texto)
+                tm.AddNewlyCreatedDBObject(texto, True)
+
+            else:
+                editor.WriteMessage(f"\nAdvertencia: No se encontraron coordenadas para PK_INICIO {pk_inicio} o PK_FIN {pk_fin} para la tubería {tuberia['ID_TUBERIA']}.")
+
+        tm.Commit()
+        OUT = "Se crearon {} líneas representando las tuberías.".format(len(lineas_creadas))
+
+else:
+    OUT = "No se pudo acceder al documento de AutoCAD."

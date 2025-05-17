@@ -1,0 +1,37 @@
+import clr
+
+clr.AddReference('AcMgd')
+clr.AddReference('acdbmgd')
+clr.AddReference('AeccDbMgd')
+
+from Autodesk.AutoCAD.ApplicationServices import Application
+from Autodesk.AutoCAD.DatabaseServices import *
+from Autodesk.AutoCAD import LayoutServices
+LayoutManager = LayoutServices.LayoutManager
+
+doc = Application.DocumentManager.MdiActiveDocument
+
+if doc:
+    db = doc.Database
+    try:
+        layout_manager = LayoutManager.Current
+        layout_names = layout_manager.GetLayoutIdList()
+        names = []
+        tr = db.TransactionManager.StartTransaction()
+        for layout_id in layout_names:
+            layout = tr.GetObject(layout_id, OpenMode.ForRead)
+            names.append(layout.LayoutName)
+        tr.Commit()
+        OUT = "Nombres de las presentaciones encontradas: " + ", ".join(names)
+
+    except Exception as e:
+        import traceback
+        OUT = "Error al listar presentaciones: " + str(e) + "\n" + traceback.format_exc()
+
+    finally:
+        if 'tr' in locals() and tr and not tr.IsDisposed:
+            tr.Dispose()
+else:
+    OUT = "No hay un documento activo de AutoCAD."
+
+OUT
