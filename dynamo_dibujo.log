@@ -1,37 +1,75 @@
 import clr
+import sys
+
+autocad_path = r"C:\Program Files\Autodesk\AutoCAD 2025"
+civil3d_path = r"C:\Program Files\Autodesk\AutoCAD 2025\C3D"
+
+if autocad_path not in sys.path:
+    sys.path.append(autocad_path)
+if civil3d_path not in sys.path:
+    sys.path.append(civil3d_path)
 
 clr.AddReference('AcMgd')
-clr.AddReference('acdbmgd')
-clr.AddReference('AeccDbMgd')
+clr.AddReference('AcDbMgd')
 
 from Autodesk.AutoCAD.ApplicationServices import Application
-from Autodesk.AutoCAD.DatabaseServices import *
-from Autodesk.AutoCAD import LayoutServices
-LayoutManager = LayoutServices.LayoutManager
+from Autodesk.AutoCAD.DatabaseServices import OpenMode, BlockTable, BlockTableRecord, Line
+from Autodesk.AutoCAD.Geometry import Point3d
 
 doc = Application.DocumentManager.MdiActiveDocument
 
 if doc:
     db = doc.Database
+    tr = None
     try:
-        layout_manager = LayoutManager.Current
-        layout_names = layout_manager.GetLayoutIdList()
-        names = []
         tr = db.TransactionManager.StartTransaction()
-        for layout_id in layout_names:
-            layout = tr.GetObject(layout_id, OpenMode.ForRead)
-            names.append(layout.LayoutName)
-        tr.Commit()
-        OUT = "Nombres de las presentaciones encontradas: " + ", ".join(names)
+        if tr.IsDisposed:
+            raise Exception("La transacción no se pudo iniciar correctamente.")
+        print("DEBUG: Transacción iniciada.")
+
+        OUT = []
+
+        current_space_id = db.CurrentSpaceId
+        OUT.append(f"ID del espacio actual: {current_space_id}")
+        print(f"DEBUG: ID del espacio actual: {current_space_id}")
+
+        btr = None
+        try:
+            btr = tr.GetObject(current_space_id, OpenMode.ForWrite)
+            OUT.append("BlockTableRecord del espacio actual obtenido para escritura")
+            print("DEBUG: BlockTableRecord del espacio actual obtenido para escritura.")
+            print(f"DEBUG: Tipo de btr: {type(btr)}")
+        except Exception as e_btr:
+            OUT.append(f"Error al obtener BTR para escritura: {str(e_btr)}")
+            print(f"DEBUG: Error al obtener BTR para escritura: {str(e_btr)}")
+
+        if btr:
+            start_point = Point3d(0, 0, 0)
+            end_point = Point3d(100, 100, 0)
+            line = Line(start_point, end_point)
+
+            btr.AppendEntity(line)
+            tr.AddNewlyCreatedDBObject(line, True)
+            OUT.append("Línea añadida al espacio actual")
+            print("DEBUG: Línea añadida al espacio actual.")
+
+            tr.Commit()
+            OUT.append("Transacción realizada correctamente")
+            print("DEBUG: Transacción realizada correctamente.")
+        else:
+            OUT.append("No se pudo obtener el BlockTableRecord para escribir la línea.")
+            print("DEBUG: No se pudo obtener el BlockTableRecord para escribir la línea.")
 
     except Exception as e:
-        import traceback
-        OUT = "Error al listar presentaciones: " + str(e) + "\n" + traceback.format_exc()
+        OUT = ["Error durante la ejecución:", str(e)]
+        print(f"DEBUG: Error general: {str(e)}")
 
     finally:
-        if 'tr' in locals() and tr and not tr.IsDisposed:
+        if tr is not None and not tr.IsDisposed:
             tr.Dispose()
+            print("DEBUG: Transacción dispuesta.")
 else:
-    OUT = "No hay un documento activo de AutoCAD."
+    OUT = ["No hay un documento activo en AutoCAD."]
+    print("DEBUG: No hay un documento activo en AutoCAD.")
 
 OUT
